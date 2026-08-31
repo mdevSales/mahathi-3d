@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahathi Devulapalli — AI Sales Engineer</title>
+  <meta name="description" content="Mahathi Devulapalli — Principal Sales Engineer, Global Public Sector. Agentforce & Salesforce AI SME. I make complex AI feel obvious." />
+
+  <!-- Open Graph (nice link previews when shared) -->
+  <meta property="og:title" content="Mahathi Devulapalli — AI Sales Engineer" />
+  <meta property="og:description" content="Principal SE, Global Public Sector · Agentforce & Salesforce AI SME. I make complex AI feel obvious." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- 3D canvas lives behind everything -->
+  <canvas id="galaxy"></canvas>
+
+  <!-- Gradient wash + vignette over the canvas for depth -->
+  <div class="overlay"></div>
+
+  <main class="content">
+    <p class="eyebrow">📍 Ashburn, VA &nbsp;·&nbsp; Global Public Sector</p>
+    <h1>Mahathi&nbsp;Devulapalli</h1>
+    <p class="roles">
+      <span>Principal Sales Engineer</span>
+      <span class="dot">·</span>
+      <span>Agentforce &amp; Salesforce AI SME</span>
+      <span class="dot">·</span>
+      <span>Storyteller</span>
+    </p>
+    <p class="tagline">I make complex AI feel <em>obvious</em> — helping government &amp; nonprofit teams put agents to work so they can do more good, faster.</p>
+
+    <nav class="links">
+      <a href="https://www.linkedin.com/in/mahathidevulapalli/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://substack.com/@mahathi746620" target="_blank" rel="noopener">Substack</a>
+      <a href="https://github.com/mdevSales" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:mdevulapalli@salesforce.com">Email</a>
+    </nav>
+  </main>
+
+  <p class="hint">move your cursor ✦ the galaxy follows</p>
+
+  <!-- three.js from CDN via import map -->
+  <script type="importmap">
+    { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
+  </script>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
