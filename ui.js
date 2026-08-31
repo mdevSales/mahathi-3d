@@ -11,6 +11,18 @@ tabs.forEach((tab) => {
   });
 });
 
+// Mobile nav — hamburger toggles the menu
+const navToggle = document.querySelector(".nav-toggle");
+const primaryNav = document.getElementById("primary-nav");
+function setNav(open) {
+  if (!navToggle || !primaryNav) return;
+  primaryNav.classList.toggle("open", open);
+  navToggle.setAttribute("aria-expanded", String(open));
+  navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+}
+navToggle?.addEventListener("click", () => setNav(!primaryNav.classList.contains("open")));
+primaryNav?.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setNav(false)));
+
 // Bookcase — click a spine to open the book in a modal
 const modal = document.getElementById("bookModal");
 const modalCard = modal?.querySelector(".book-modal-card");
@@ -36,7 +48,7 @@ document.querySelectorAll(".spine").forEach((spine) => {
   spine.addEventListener("click", () => openBook(spine));
 });
 modal?.querySelectorAll("[data-close]").forEach((el) => el.addEventListener("click", closeBook));
-document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeBook(); });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeBook(); setNav(false); } });
 
 // Reveal sections on scroll
 const io = new IntersectionObserver(

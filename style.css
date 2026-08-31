@@ -11,8 +11,8 @@
   --text: #ece9f1;
   --muted: #9b96a8;
   --muted-2: #6f6a7d;
-  /* Type system — Manrope (display/body), Cormorant italic (one poetic beat), IBM Plex Mono (labels) */
-  --font-display: "Manrope", system-ui, sans-serif;
+  /* Type system — Fraunces (editorial display), Manrope (body), Cormorant italic (poetic beat), IBM Plex Mono (labels) */
+  --font-display: "Fraunces", "Cormorant", Georgia, serif;
   --font-body: "Manrope", system-ui, sans-serif;
   --font-poetic: "Cormorant", Georgia, serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
@@ -88,6 +88,38 @@ em, .book-sub { font-family: var(--font-poetic); font-style: italic; }
 }
 .nav nav a:hover { color: var(--text); }
 
+/* Hamburger — hidden on desktop */
+.nav-toggle {
+  display: none; width: 40px; height: 40px; padding: 10px;
+  flex-direction: column; justify-content: space-between;
+  background: transparent; border: 1px solid var(--border); border-radius: 8px;
+  cursor: pointer; z-index: 12;
+}
+.nav-toggle span {
+  display: block; height: 2px; width: 100%; border-radius: 2px;
+  background: var(--text); transition: transform 0.25s var(--ease), opacity 0.2s var(--ease);
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 720px) {
+  .nav-toggle { display: flex; }
+  .nav nav {
+    position: fixed; inset: 0 0 auto 0; top: 0; padding: 84px 28px 32px;
+    flex-direction: column; gap: 4px;
+    background: rgba(11,9,16,0.96); backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    transform: translateY(-100%); opacity: 0; pointer-events: none;
+    transition: transform 0.32s var(--ease), opacity 0.32s var(--ease);
+  }
+  .nav nav.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+  .nav nav a {
+    font-size: 1.35rem; font-weight: 600; color: var(--text);
+    padding: 14px 4px; border-bottom: 1px solid var(--border);
+  }
+}
+
 /* ---------- Shared section shell ---------- */
 section { position: relative; z-index: 2; }
 .panel {
@@ -100,8 +132,9 @@ section { position: relative; z-index: 2; }
   color: var(--accent); margin-bottom: 18px;
 }
 .panel h2 {
-  font-size: clamp(1.9rem, 5vw, 2.9rem); font-weight: 600; letter-spacing: -0.025em;
-  line-height: 1.08; margin-bottom: 38px; color: var(--text);
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 500; letter-spacing: -0.02em;
+  line-height: 1.03; margin-bottom: 40px; color: var(--text);
 }
 
 /* ---------- Hero ---------- */
@@ -179,7 +212,8 @@ section { position: relative; z-index: 2; }
 .eyebrow .ico { color: var(--accent); }
 /* ONE signature gradient — the name only, 2-stop tonally close */
 .hero h1 {
-  font-size: clamp(2.6rem, 8vw, 5.6rem); font-weight: 700; line-height: 1.02; letter-spacing: -0.03em;
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 9vw, 6.2rem); font-weight: 500; line-height: 0.98; letter-spacing: -0.03em;
   background: linear-gradient(105deg, #ffffff 30%, var(--accent) 100%);
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
   animation: rise 0.9s var(--ease) both;
@@ -326,12 +360,6 @@ section { position: relative; z-index: 2; }
   padding: 9px 15px; font-weight: 500; font-size: 0.9rem; color: var(--muted);
 }
 
-.fingerprint { margin-top: 50px; display: grid; gap: 18px; }
-.fp-row { display: grid; grid-template-columns: 240px 1fr; gap: 18px; align-items: center; }
-.fp-row span { font-weight: 500; font-size: 0.9rem; color: var(--muted); }
-.bar { height: 6px; border-radius: 999px; background: rgba(255,255,255,0.07); overflow: hidden; }
-.bar i { display: block; height: 100%; border-radius: 999px; background: var(--accent-strong); }
-
 /* ---------- Community ---------- */
 .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .qcard {
@@ -451,7 +479,7 @@ section { position: relative; z-index: 2; }
   display: inline-block; font-size: 0.66rem; font-weight: 500; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--accent); margin-bottom: 16px;
 }
-.book-modal-body h4 { font-size: 1.55rem; font-weight: 600; line-height: 1.12; letter-spacing: -0.02em; margin-bottom: 8px; }
+.book-modal-body h4 { font-family: var(--font-display); font-size: 1.75rem; font-weight: 500; line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 8px; }
 .book-sub { font-size: 1.05rem; color: var(--muted); margin-bottom: 18px; }
 .book-desc { font-size: 0.95rem; line-height: 1.7; color: var(--muted); margin-bottom: 22px; }
 /* category book — a list of the skills bound inside it */
@@ -515,6 +543,23 @@ section { position: relative; z-index: 2; }
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s var(--ease), transform 0.6s var(--ease); }
 .reveal.visible { opacity: 1; transform: none; }
 
+/* Staggered child cascade — grids animate in one-by-one for directed motion */
+.reveal .pillars .pillar,
+.reveal .card-grid .qcard,
+.reveal .cert-grid .cert-tile {
+  opacity: 0; transform: translateY(16px);
+  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+}
+.reveal.visible .pillars .pillar,
+.reveal.visible .card-grid .qcard,
+.reveal.visible .cert-grid .cert-tile { opacity: 1; transform: none; }
+.reveal.visible .pillar:nth-child(2), .reveal.visible .qcard:nth-child(2), .reveal.visible .cert-tile:nth-child(2) { transition-delay: 0.06s; }
+.reveal.visible .pillar:nth-child(3), .reveal.visible .qcard:nth-child(3), .reveal.visible .cert-tile:nth-child(3) { transition-delay: 0.12s; }
+.reveal.visible .qcard:nth-child(4), .reveal.visible .cert-tile:nth-child(4) { transition-delay: 0.18s; }
+.reveal.visible .cert-tile:nth-child(5) { transition-delay: 0.24s; }
+.reveal.visible .cert-tile:nth-child(6) { transition-delay: 0.30s; }
+.reveal.visible .cert-tile:nth-child(7) { transition-delay: 0.36s; }
+
 /* ---------- Animations ---------- */
 @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 @keyframes pulse { 0%,100% { opacity: 0.4; } 50% { opacity: 0.75; } }
@@ -522,12 +567,9 @@ section { position: relative; z-index: 2; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 720px) {
-  .nav nav { gap: 14px; }
-  .nav nav a { font-size: 0.82rem; }
   .about-grid { grid-template-columns: 1fr; justify-items: center; text-align: center; }
   .avatar { width: 150px; height: 150px; }
   .honor-groups, .card-grid { grid-template-columns: 1fr; }
-  .fp-row { grid-template-columns: 1fr; gap: 8px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -536,5 +578,5 @@ section { position: relative; z-index: 2; }
   .hero-code-wrap, .hero-code { animation: none; }
   .hero-code .caret { animation: none; }
   .backdrop-glow { animation: none; }
-  .reveal { opacity: 1; transform: none; transition: none; }
+  .reveal, .reveal .pillar, .reveal .qcard, .reveal .cert-tile { opacity: 1; transform: none; transition: none; }
 }

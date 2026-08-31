@@ -12,8 +12,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant:ital,wght@1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./style.css?v=15" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&family=Cormorant:ital,wght@1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css?v=16" />
 </head>
 <body>
   <!-- Layered CSS backdrop (near-black + soft violet glow + grain) -->
@@ -25,7 +25,10 @@
   <!-- Sticky nav -->
   <header class="nav">
     <a href="#top" class="brand">M<span>.</span></a>
-    <nav>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="primary-nav">
       <a href="#about">About</a>
       <a href="#work">Work</a>
       <a href="#experience">Experience</a>
@@ -50,7 +53,6 @@
           <span class="dot">·</span>
           <span>Storyteller</span>
         </p>
-        <p class="tagline">The missions that matter most tend to run on the thinnest resources. My job is to make AI simple enough to actually <em>trust</em>, so the people serving the public can spend their time on the work only they can do.</p>
         <nav class="links">
           <a href="#about" class="primary">Explore my work</a>
           <a href="mailto:mdevulapalli@salesforce.com">Get in touch</a>
@@ -437,14 +439,6 @@
       </div>
     </div>
 
-    <!-- Technical fingerprint -->
-    <div class="fingerprint">
-      <div class="fp-row"><span>Agentforce &amp; Salesforce AI</span><div class="bar"><i style="width:96%"></i></div></div>
-      <div class="fp-row"><span>Solution storytelling &amp; demos</span><div class="bar"><i style="width:94%"></i></div></div>
-      <div class="fp-row"><span>Salesforce platform</span><div class="bar"><i style="width:90%"></i></div></div>
-      <div class="fp-row"><span>AI architecture &amp; prompting</span><div class="bar"><i style="width:85%"></i></div></div>
-      <div class="fp-row"><span>Full-stack &amp; data</span><div class="bar"><i style="width:72%"></i></div></div>
-    </div>
   </section>
 
   <!-- ============ COMMUNITY ============ -->
@@ -533,6 +527,6 @@
     <p class="foot">Come for the AI, stay for the yapping.</p>
   </section>
 
-  <script src="./ui.js?v=10"></script>
+  <script src="./ui.js?v=11"></script>
 </body>
 </html>
