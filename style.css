@@ -127,12 +127,22 @@ section { position: relative; z-index: 2; }
 }
 
 /* Live code card */
-.hero-code {
+.hero-code-wrap {
   pointer-events: none; width: 100%;
+  animation: rise 0.9s 0.35s var(--ease) both;
+}
+.hero-code {
+  width: 100%;
   border-radius: 12px; border: 1px solid var(--border-strong);
   background: rgba(18,15,24,0.72); backdrop-filter: blur(8px);
   box-shadow: 0 24px 60px -24px rgba(0,0,0,0.65), 0 0 0 1px rgba(255,255,255,0.02) inset;
-  overflow: hidden; animation: rise 0.9s 0.35s var(--ease) both;
+  overflow: hidden;
+  animation: float 7s ease-in-out 1.2s infinite;
+  will-change: transform;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-12px) rotate(-0.4deg); }
 }
 .hero-code .code-bar {
   display: flex; align-items: center; gap: 8px;
@@ -146,9 +156,9 @@ section { position: relative; z-index: 2; }
   color: var(--muted-2); letter-spacing: 0.04em;
 }
 .hero-code pre {
-  margin: 0; padding: 20px 22px; overflow-x: auto;
-  font-family: var(--font-mono); font-size: 0.8rem; line-height: 1.85;
-  color: var(--text);
+  margin: 0; padding: 20px 22px; overflow: hidden;
+  font-family: var(--font-mono); font-size: 0.78rem; line-height: 1.85;
+  color: var(--text); white-space: pre;
 }
 .hero-code .tok-key { color: var(--accent); }
 .hero-code .tok-type { color: #c4b5fd; }
@@ -491,7 +501,7 @@ section { position: relative; z-index: 2; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .hero h1, .roles, .tagline, .links, .hint { animation: none; }
-  .hero-code { animation: none; }
+  .hero-code-wrap, .hero-code { animation: none; }
   .hero-code .caret { animation: none; }
   .backdrop-glow { animation: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
