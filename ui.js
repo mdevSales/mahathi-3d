@@ -11,6 +11,17 @@ tabs.forEach((tab) => {
   });
 });
 
+// Bookshelf horizontal scroll arrows
+document.querySelectorAll(".shelf-block").forEach((block) => {
+  const shelf = block.querySelector(".shelf");
+  block.querySelectorAll(".shelf-arrow").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const dir = Number(btn.dataset.dir) || 1;
+      shelf.scrollBy({ left: dir * 320, behavior: "smooth" });
+    });
+  });
+});
+
 // Reveal sections on scroll
 const io = new IntersectionObserver(
   (entries) => {
