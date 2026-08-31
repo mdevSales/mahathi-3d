@@ -26,11 +26,11 @@ body {
 }
 
 /* Agentforce wordmark — the official skewed-italic "f" (per brand spec) */
-.af-mark { font-family: inherit; font-weight: inherit; }
+.af-mark { font-family: inherit; font-weight: inherit; white-space: nowrap; }
 .af-mark .af-f {
   font-style: normal; display: inline-block;
   transform: skewX(-11deg); transform-origin: 0 100%;
-  padding: 0 0.04em 0 0.02em;
+  margin: 0 -0.02em; padding: 0;
 }
 /* poetic italic emphasis — Cormorant, reserved for the emotional beat */
 em, .tagline em, .book-sub { font-family: var(--font-poetic); font-style: italic; }
