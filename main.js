@@ -7,7 +7,7 @@ import * as THREE from "three";
 
 const canvas = document.getElementById("galaxy");
 const scene = new THREE.Scene();
-scene.fog = new THREE.FogExp2(0x0d0817, 0.02);
+scene.fog = new THREE.FogExp2(0x0b0910, 0.02);
 
 const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 100);
 camera.position.set(0, 1.6, 8);
@@ -26,11 +26,12 @@ const PARAMS = {
   randomnessPower: 2.6,
 };
 
-// Brand palette — points blend from core (bright) to edge (deep)
-const colorInner = new THREE.Color(0xffd9f4); // near-white pink at the core
-const colorMid = new THREE.Color(0xa855f7);   // purple
-const colorOuter = new THREE.Color(0x6366f1); // indigo at the rim
-const colorAccent = new THREE.Color(0xec4899); // pink sparkle
+// Palette — a disciplined violet family so the backdrop reads as one accent,
+// not a three-color gradient. Warm white core → violet body → deep indigo rim.
+const colorInner = new THREE.Color(0xf3ecff); // warm near-white at the core
+const colorMid = new THREE.Color(0xa855f7);   // violet (the single accent)
+const colorOuter = new THREE.Color(0x4c3a8c); // deep muted indigo at the rim
+const colorAccent = new THREE.Color(0xc4b5fd); // pale violet sparkle (was hot pink)
 
 const positions = new Float32Array(PARAMS.count * 3);
 const colors = new Float32Array(PARAMS.count * 3);

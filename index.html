@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant:ital,wght@1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./style.css?v=8" />
+  <link rel="stylesheet" href="./style.css?v=9" />
 </head>
 <body>
   <!-- 3D canvas lives behind everything -->
@@ -37,7 +37,7 @@
   <!-- ============ HERO ============ -->
   <section id="top" class="hero">
     <div class="content">
-      <p class="eyebrow">📍 Ashburn, VA &nbsp;·&nbsp; Global Public Sector</p>
+      <p class="eyebrow"><svg class="ico ico-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Ashburn, VA &nbsp;·&nbsp; Global Public Sector</p>
       <h1>Mahathi&nbsp;Devulapalli</h1>
       <p class="roles">
         <span>Principal Sales Engineer</span>
@@ -52,7 +52,7 @@
         <a href="mailto:mdevulapalli@salesforce.com">Get in touch</a>
       </nav>
     </div>
-    <p class="hint">scroll ✦ or steer the galaxy with your cursor</p>
+    <p class="hint">scroll · or steer the galaxy with your cursor</p>
   </section>
 
   <!-- ============ ABOUT ============ -->
@@ -78,9 +78,9 @@
     <div class="bookcase">
       <!-- Shelf 1 — Customer Work -->
       <div class="shelf-row">
-        <div class="shelf-label">🏛️ Customer Work <small>public sector · names hidden</small></div>
+        <div class="shelf-label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 18v-7"/><path d="M11.12 2.198a2 2 0 0 1 1.76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949z"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M3 22h18"/><path d="M6 18v-7"/></svg>Customer Work <small>public sector · names hidden</small></div>
         <div class="spines">
-          <button class="spine" style="--c1:#6366f1;--c2:#a855f7;--h:250px" aria-label="Open: Voice-First Analytics">
+          <button class="spine" style="--c1:#3b4b7a;--c2:#6d5ba8;--h:250px" aria-label="Open: Voice-First Analytics">
             <span class="spine-title">Voice-First Analytics</span>
             <span class="spine-band"></span>
             <template class="spine-detail">
@@ -91,7 +91,7 @@
               <div class="book-tech"><span>Agentforce</span><span>Data Cloud</span><span>Apex</span><span>Web Speech API</span></div>
             </template>
           </button>
-          <button class="spine" style="--c1:#a855f7;--c2:#ec4899;--h:224px" aria-label="Open: Compliance Command Center">
+          <button class="spine" style="--c1:#6d5ba8;--c2:#8a4d78;--h:224px" aria-label="Open: Compliance Command Center">
             <span class="spine-title">Compliance Command Center</span>
             <span class="spine-band"></span>
             <template class="spine-detail">
@@ -102,7 +102,7 @@
               <div class="book-tech"><span>Tableau-style viz</span><span>GeoJSON drill-down</span><span>Data blending</span></div>
             </template>
           </button>
-          <button class="spine" style="--c1:#ec4899;--c2:#f59e0b;--h:242px" aria-label="Open: Caseworker Copilot">
+          <button class="spine" style="--c1:#8a4d78;--c2:#9c6a4a;--h:242px" aria-label="Open: Caseworker Copilot">
             <span class="spine-title">Caseworker Copilot</span>
             <span class="spine-band"></span>
             <template class="spine-detail">
@@ -113,7 +113,7 @@
               <div class="book-tech"><span>Agentforce</span><span>Read + write actions</span><span>Record cards</span></div>
             </template>
           </button>
-          <button class="spine" style="--c1:#6366f1;--c2:#ec4899;--h:232px" aria-label="Open: Grantmaking Agent">
+          <button class="spine" style="--c1:#4c5a86;--c2:#7a5580;--h:232px" aria-label="Open: Grantmaking Agent">
             <span class="spine-title">Grantmaking Agent</span>
             <span class="spine-band"></span>
             <template class="spine-detail">
@@ -128,52 +128,123 @@
         <div class="ledge"></div>
       </div>
 
-      <!-- Shelf 2 — SE Productivity -->
+      <!-- Shelf 2 — SE Productivity (category books, each opens to its skills) -->
       <div class="shelf-row">
-        <div class="shelf-label">⚡ SE Productivity <small>tools I built to scale myself</small></div>
+        <div class="shelf-label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>SE Productivity <small>~35 Slack-native skills I built to scale my team</small></div>
         <div class="spines">
-          <button class="spine" style="--c1:#a855f7;--c2:#6366f1;--h:246px" aria-label="Open: Agent Provisioner">
-            <span class="spine-title">Agent Provisioner</span>
+          <button class="spine" style="--c1:#4c5a86;--c2:#6a5a8e;--h:252px" aria-label="Open: SE Director System">
+            <span class="spine-title">SE Director System</span>
             <span class="spine-band"></span>
             <template class="spine-detail">
-              <span class="book-tag">Reusable Skill</span>
-              <h4>Agent Provisioner</h4>
-              <p class="book-sub">A working agent in ~3 minutes.</p>
-              <p class="book-desc">A one-command skill that stands up a complete "lost &amp; found" service agent in any org — autolaunched Flow, a 3-subagent script, and an Apex smoke test that proves it works against real validation rules. Bakes in the gotchas I've hit so the next build doesn't have to.</p>
-              <div class="book-tech"><span>Agentforce Scripting</span><span>Flow</span><span>Apex</span></div>
+              <span class="book-tag">Multi-Agent Orchestration</span>
+              <h4>SE Director System</h4>
+              <p class="book-sub">One request in. The right specialist answers.</p>
+              <p class="book-desc">A router-and-specialists system living in Slack: a director agent reads any incoming ask, decides which expert should handle it, and hands off. Nine specialists sit behind it, each with its own tools and guardrails — plus an always-on watchdog. It's the piece I'm proudest of: real multi-agent design, not a single mega-prompt.</p>
+              <ul class="book-list">
+                <li>Router — classifies the ask, routes to a specialist</li>
+                <li>Slack Sweeper — triages channels for what needs action</li>
+                <li>Enablement &amp; Skills</li>
+                <li>Public-Sector Compliance &amp; GovCloud</li>
+                <li>Field Partnership &amp; AE Enablement</li>
+                <li>Discovery &amp; Demo</li>
+                <li>Deal Strategy &amp; Competitive</li>
+                <li>Partner &amp; Ecosystem Solutions</li>
+                <li>24/7 Watchdog — always-on monitor</li>
+              </ul>
+              <div class="book-tech"><span>Router pattern</span><span>Specialist subagents</span><span>Slack</span><span>Guardrails</span></div>
             </template>
           </button>
-          <button class="spine" style="--c1:#ec4899;--c2:#a855f7;--h:228px" aria-label="Open: PitchCraft">
-            <span class="spine-title">PitchCraft</span>
+          <button class="spine" style="--c1:#3b4b7a;--c2:#5a6b8c;--h:238px" aria-label="Open: Deal Intelligence">
+            <span class="spine-title">Deal Intelligence</span>
             <span class="spine-band"></span>
             <template class="spine-detail">
-              <span class="book-tag">Enablement</span>
-              <h4>PitchCraft</h4>
-              <p class="book-sub">On-brand pitch decks, on demand.</p>
-              <p class="book-desc">A skill that turns a rough solution idea into a polished, brand-consistent pitch narrative — so the story is ready before the room is. Built to make great demos repeatable, not heroic.</p>
-              <div class="book-tech"><span>Prompt design</span><span>Brand system</span></div>
+              <span class="book-tag">Deal &amp; Opportunity Work</span>
+              <h4>Deal Intelligence</h4>
+              <p class="book-sub">Rigor on the pipeline, without the busywork.</p>
+              <p class="book-desc">A set of skills that keep opportunities honest and moving — assessing solution rigor, surfacing next steps, prioritizing accounts, and keeping the fields that matter up to date. Built so an SE spends time on the deal, not the spreadsheet about the deal.</p>
+              <ul class="book-list">
+                <li>Solution App Rigor reviewer</li>
+                <li>AE Pipeline Canvas</li>
+                <li>Solution Canvas Generator</li>
+                <li>SE update &amp; app-rigor field assistant</li>
+                <li>Public-sector deal assessment agent</li>
+                <li>Next-step &amp; scorecard assistant</li>
+                <li>Account prioritizer</li>
+                <li>Use case manager</li>
+              </ul>
+              <div class="book-tech"><span>Agentforce</span><span>CRM data</span><span>Structured output</span></div>
             </template>
           </button>
-          <button class="spine" style="--c1:#6366f1;--c2:#a855f7;--h:240px" aria-label="Open: Demo Dashboard Builder">
-            <span class="spine-title">Demo Dashboard Builder</span>
+          <button class="spine" style="--c1:#6a5a8e;--c2:#8a4d78;--h:230px" aria-label="Open: Pitch &amp; Solution Content">
+            <span class="spine-title">Pitch &amp; Solution Content</span>
+            <span class="spine-band"></span>
+            <template class="spine-detail">
+              <span class="book-tag">Selling &amp; Pitching</span>
+              <h4>Pitch &amp; Solution Content</h4>
+              <p class="book-sub">The story, ready before the room is.</p>
+              <p class="book-desc">Skills that turn a rough opportunity into on-message selling content — pitch narratives, vision scripts, demo build plans and RFP overviews tuned to public-sector and industry buyers. Great demos, made repeatable instead of heroic.</p>
+              <ul class="book-list">
+                <li>Public-sector SKU advisor</li>
+                <li>Economic-development sales skill</li>
+                <li>AI pitch advisor</li>
+                <li>Gov demo build planner</li>
+                <li>Enterprise vision script builder</li>
+                <li>RFP solution overview builder</li>
+              </ul>
+              <div class="book-tech"><span>Prompt design</span><span>Brand system</span><span>Narrative</span></div>
+            </template>
+          </button>
+          <button class="spine" style="--c1:#4a6b6b;--c2:#5a6b8c;--h:244px" aria-label="Open: Demo &amp; Enablement Kit">
+            <span class="spine-title">Demo &amp; Enablement Kit</span>
             <span class="spine-band"></span>
             <template class="spine-detail">
               <span class="book-tag">Demo Tooling</span>
-              <h4>Demo Dashboard Builder</h4>
-              <p class="book-sub">Believable data, in minutes.</p>
-              <p class="book-desc">A skill that spins up realistic, illustrative dashboards for a demo scenario — so a discovery conversation can show, not just tell. Fewer hours in spreadsheets, more time on the story that matters.</p>
-              <div class="book-tech"><span>Data viz</span><span>Chart.js</span><span>Mock data</span></div>
+              <h4>Demo &amp; Enablement Kit</h4>
+              <p class="book-sub">From empty org to running demo, fast.</p>
+              <p class="book-desc">The build tools I reach for most: a one-command agent provisioner, an on-brand pitch generator, and demo dashboard + script builders. Together they take a scenario from empty org to a demo any SE can run the same way twice.</p>
+              <ul class="book-list">
+                <li>Agent Provisioner — a working agent in ~3 min</li>
+                <li>PitchCraft — on-brand pitch narratives</li>
+                <li>Demo Dashboard Builder — believable data, fast</li>
+                <li>Demo Script Generator — click-path + talk-track</li>
+              </ul>
+              <div class="book-tech"><span>Agentforce Scripting</span><span>Flow</span><span>Apex</span><span>Chart.js</span></div>
             </template>
           </button>
-          <button class="spine" style="--c1:#a855f7;--c2:#ec4899;--h:220px" aria-label="Open: Demo Script Generator">
-            <span class="spine-title">Demo Script Generator</span>
+          <button class="spine" style="--c1:#5a6b8c;--c2:#6d5ba8;--h:224px" aria-label="Open: Status &amp; Self-Management">
+            <span class="spine-title">Status &amp; Self-Management</span>
             <span class="spine-band"></span>
             <template class="spine-detail">
-              <span class="book-tag">Demo Tooling</span>
-              <h4>Demo Script Generator</h4>
-              <p class="book-sub">The walkthrough writes itself.</p>
-              <p class="book-desc">A skill that produces clean, copy-paste demo scripts from a scenario — the click-path, the talk-track, the "here's what just happened" — so any SE can run the story the same way twice.</p>
-              <div class="book-tech"><span>Structured output</span><span>Enablement</span></div>
+              <span class="book-tag">Personal Productivity</span>
+              <h4>Status &amp; Self-Management</h4>
+              <p class="book-sub">The reporting overhead, mostly automated.</p>
+              <p class="book-desc">Skills that draft the weekly updates, track accomplishments, prep check-ins and keep goals current — so the reporting layer of the job takes minutes instead of an afternoon.</p>
+              <ul class="book-list">
+                <li>Learning gap analyzer</li>
+                <li>Weekly status update drafter</li>
+                <li>Weekly accomplishments tracker</li>
+                <li>Employee check-in prep</li>
+                <li>V2MOM update assistant</li>
+              </ul>
+              <div class="book-tech"><span>Summarization</span><span>Templates</span><span>Slack</span></div>
+            </template>
+          </button>
+          <button class="spine" style="--c1:#7a5580;--c2:#9c6a4a;--h:216px" aria-label="Open: Utilities">
+            <span class="spine-title">Utilities</span>
+            <span class="spine-band"></span>
+            <template class="spine-detail">
+              <span class="book-tag">Everyday Utilities</span>
+              <h4>Utilities</h4>
+              <p class="book-sub">The small stuff, done instantly.</p>
+              <p class="book-desc">Quick-hit skills the team leans on daily — reformatting resource posts, turning long threads into clean FAQs, digesting the monthly release notes, and checking product availability for GovCloud.</p>
+              <ul class="book-list">
+                <li>Resource post formatter</li>
+                <li>Thread → FAQ converter</li>
+                <li>Monthly Agentforce release digest</li>
+                <li>GovCloud product availability checker</li>
+                <li>Data foundations support</li>
+              </ul>
+              <div class="book-tech"><span>Formatting</span><span>Summarization</span><span>Slack</span></div>
             </template>
           </button>
         </div>
@@ -182,9 +253,9 @@
 
       <!-- Shelf 3 — Personal -->
       <div class="shelf-row">
-        <div class="shelf-label">💜 Personal <small>things I make for love</small></div>
+        <div class="shelf-label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>Personal <small>things I make for love</small></div>
         <div class="spines">
-          <button class="spine" style="--c1:#ec4899;--c2:#6366f1;--h:244px" aria-label="Open: BrandOS">
+          <button class="spine" style="--c1:#8a4d78;--c2:#4c5a86;--h:244px" aria-label="Open: BrandOS">
             <span class="spine-title">BrandOS</span>
             <span class="spine-band"></span>
             <template class="spine-detail">
@@ -195,7 +266,7 @@
               <div class="book-tech"><span>Next.js</span><span>TypeScript</span><span>Claude API</span><span>Prisma</span></div>
             </template>
           </button>
-          <button class="spine" style="--c1:#a855f7;--c2:#ec4899;--h:226px" aria-label="Open: This Site">
+          <button class="spine" style="--c1:#6d5ba8;--c2:#7a5580;--h:226px" aria-label="Open: This Site">
             <span class="spine-title">This Site</span>
             <span class="spine-band"></span>
             <template class="spine-detail">
@@ -232,41 +303,41 @@
       </div>
       <p>The trusted advisor public-sector and mission-driven teams call when AI has to actually work — from the first whiteboard sketch to a production rollout they can stand behind.</p>
     </div>
-    <p class="cert-lead">Nine Salesforce certifications, verified on <a href="https://www.salesforce.com/trailblazer/mdevulapalli2020" target="_blank" rel="noopener">my Trailblazer profile</a> — depth I can prove, not just claim. Each charm is a badge; tap one to open it. ✨</p>
-    <div class="bracelet" aria-label="Certification charm bracelet">
-      <button class="charm" aria-label="Agentforce Specialist" data-title="Agentforce Specialist" data-blurb="Certified to design, build and ship production Agentforce agents.">🤖</button>
-      <button class="charm" aria-label="Agentblazer Legend" data-title="Agentblazer Legend" data-blurb="Top-tier standing in Salesforce's AI enablement community.">🏅</button>
-      <button class="charm" aria-label="AI Associate and AI Specialist" data-title="AI Associate &amp; AI Specialist" data-blurb="Foundational and advanced Salesforce AI credentials.">🧠</button>
-      <button class="charm" aria-label="Platform Administrator" data-title="Platform Administrator" data-blurb="Core certification for configuring and governing the platform.">⚙️</button>
-      <button class="charm" aria-label="Salesforce Admin" data-title="Salesforce Admin" data-blurb="Certified administrator — the backbone of any org.">🛠️</button>
-      <button class="charm" aria-label="App Builder" data-title="App Builder" data-blurb="Certified to build custom, declarative apps on the platform.">📱</button>
-      <button class="charm" aria-label="Experience Cloud" data-title="Experience Cloud" data-blurb="Certified in building portals and communities on Experience Cloud.">🌐</button>
+    <p class="cert-lead">Salesforce certifications, verified on <a href="https://www.salesforce.com/trailblazer/mdevulapalli2020" target="_blank" rel="noopener">my Trailblazer profile</a>.</p>
+    <div class="cert-grid">
+      <div class="cert-tile"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg><span>Agentforce Specialist</span></div>
+      <div class="cert-tile"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg><span>AI Specialist</span></div>
+      <div class="cert-tile"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg><span>AI Associate</span></div>
+      <div class="cert-tile"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2"/><circle cx="12" cy="12" r="3"/></svg><span>Platform Administrator</span></div>
+      <div class="cert-tile"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg><span>Salesforce Administrator</span></div>
+      <div class="cert-tile"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 22V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1z"/><path d="M14 7a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1z"/><path d="M10 15h4"/><path d="M10 11h4"/><path d="M14 2a1 1 0 0 1 1 1v3H9V3a1 1 0 0 1 1-1z"/></svg><span>Platform App Builder</span></div>
+      <div class="cert-tile"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg><span>Experience Cloud Consultant</span></div>
     </div>
 
     <div class="honor-groups">
       <div class="honor-col">
-        <h3 class="honor-title">🔧 Technical &amp; recognition</h3>
+        <h3 class="honor-title"><svg class="ico ico-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0z"/></svg>Recognition</h3>
         <div class="honor">
-          <span class="honor-mark">🏆</span>
+          <span class="honor-mark"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0z"/></svg></span>
           <div><b>40 Under 40 — Northern Virginia</b><small>Recognized among the region's emerging leaders</small></div>
         </div>
         <div class="honor">
-          <span class="honor-mark">🏅</span>
+          <span class="honor-mark"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg></span>
           <div><b>Agentblazer Legend</b><small>Top-tier standing in Salesforce's AI enablement community</small></div>
         </div>
       </div>
       <div class="honor-col">
-        <h3 class="honor-title">🤝 Community &amp; leadership</h3>
+        <h3 class="honor-title"><svg class="ico ico-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 21a8 8 0 0 0-16 0"/><circle cx="10" cy="8" r="5"/><path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"/></svg>Community &amp; leadership</h3>
         <div class="honor">
-          <span class="honor-mark">💫</span>
+          <span class="honor-mark"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 14h1v4"/><path d="M16 2v4"/><path d="M3 10h18"/><path d="M8 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M12 14a3 3 0 1 0 0 6"/></svg></span>
           <div><b>Co-Founder — WISE GPS</b><small>Co-founded a community lifting people across Salesforce's Global Public Sector org</small></div>
         </div>
         <div class="honor">
-          <span class="honor-mark">🌏</span>
+          <span class="honor-mark"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <div><b>Southasiaforce DMV — Lead</b><small>Leading the DC · MD · VA chapter of Salesforce's South Asian community</small></div>
         </div>
         <div class="honor">
-          <span class="honor-mark">🎯</span>
+          <span class="honor-mark"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
           <div><b>Presales Collective</b><small>Active member of the global SE community</small></div>
         </div>
       </div>
@@ -325,19 +396,19 @@
     <h2>The work that isn't on a slide.</h2>
     <div class="card-grid">
       <div class="qcard">
-        <h3>🚪 I hold the door open</h3>
+        <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 4h3a2 2 0 0 1 2 2v14"/><path d="M2 20h3"/><path d="M13 20h9"/><path d="M10 12v.01"/><path d="M13 4.562v16.157a1 1 0 0 1-1.242.97L5 20V5.562a2 2 0 0 1 1.515-1.94l4-1A2 2 0 0 1 13 4.561z"/></svg>I hold the door open</h3>
         <p>Whether it's co-founding WISE GPS or mentoring through the Presales Collective, the throughline is the same: talent rises faster when someone reaches back. I coach engineers and aspiring SEs to find their voice in the room and their footing in the platform.</p>
       </div>
       <div class="qcard">
-        <h3>🌏 Rooted in my community</h3>
+        <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>Rooted in my community</h3>
         <p>Leading Southasiaforce in the DMV isn't a title to me — it's belonging. I love creating space where people who look like me can show up fully and rise together.</p>
       </div>
       <div class="qcard">
-        <h3>💜 Nonprofit champion</h3>
+        <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>Nonprofit champion</h3>
         <p>I help mission-driven orgs punch above their weight with the right technology and a little strategic scrappiness — because the people doing the hardest work deserve the best tools.</p>
       </div>
       <div class="qcard">
-        <h3>📚 Reader &amp; storyteller</h3>
+        <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>Reader &amp; storyteller</h3>
         <p>Books by day, Netflix by night, strong opinions on plot pacing always. If it's a good story or a good outfit, I'm in.</p>
       </div>
     </div>
@@ -362,7 +433,7 @@
   <!-- ============ CONTACT ============ -->
   <section id="contact" class="panel reveal contact">
     <span class="kicker">Contact</span>
-    <h2>Let's connect ✨</h2>
+    <h2>Let's connect.</h2>
     <p class="contact-lead">Open to conversations about public-sector AI, Agentforce, mentorship — or just a good book recommendation.</p>
     <nav class="links">
       <a href="https://www.linkedin.com/in/mahathidevulapalli/" target="_blank" rel="noopener" class="primary">LinkedIn</a>
@@ -370,14 +441,14 @@
       <a href="https://github.com/mdevSales" target="_blank" rel="noopener">GitHub</a>
       <a href="mailto:mdevulapalli@salesforce.com">Email</a>
     </nav>
-    <p class="foot">Come for the AI, stay for the yapping. 💜</p>
+    <p class="foot">Come for the AI, stay for the yapping.</p>
   </section>
 
   <!-- three.js from CDN via import map -->
   <script type="importmap">
     { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
   </script>
-  <script type="module" src="./main.js?v=6"></script>
-  <script src="./ui.js?v=8"></script>
+  <script type="module" src="./main.js?v=7"></script>
+  <script src="./ui.js?v=9"></script>
 </body>
 </html>
