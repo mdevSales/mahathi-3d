@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif">
+  <!-- browser chrome -->
+  <rect x="0.5" y="0.5" width="819" height="559" rx="14" fill="#0f0d15" stroke="#ffffff22"/>
+  <circle cx="24" cy="20" r="5" fill="#ffffff26"/>
+  <circle cx="42" cy="20" r="5" fill="#ffffff1a"/>
+  <circle cx="60" cy="20" r="5" fill="#ffffff14"/>
+  <rect x="298" y="10" width="224" height="20" rx="10" fill="#ffffff10"/>
+  <text x="410" y="24" text-anchor="middle" fill="#8a93a5" font-size="10">safeguard-portal · demo</text>
+
+  <!-- app canvas -->
+  <rect x="8" y="40" width="804" height="512" rx="8" fill="#f4f6f9"/>
+
+  <!-- top nav -->
+  <rect x="8" y="40" width="804" height="46" fill="#ffffff"/>
+  <line x1="8" y1="86" x2="812" y2="86" stroke="#e5e8ee"/>
+  <rect x="28" y="49" width="27" height="27" rx="7" fill="#14233f"/>
+  <path d="M35 62 l4 4 L48 55" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="64" y="67" fill="#12203c" font-size="14" font-weight="700">Safeguard Portal</text>
+  <text x="322" y="68" fill="#12203c" font-size="12" font-weight="600">Dashboard</text>
+  <text x="400" y="68" fill="#6b7484" font-size="12">Inspection</text>
+  <text x="478" y="68" fill="#6b7484" font-size="12">Corrective Actions</text>
+  <text x="600" y="68" fill="#6b7484" font-size="12">Submit Case</text>
+  <text x="692" y="68" fill="#6b7484" font-size="12">Resources</text>
+  <circle cx="784" cy="63" r="13" fill="#14233f"/>
+  <text x="784" y="67" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="700">★</text>
+
+  <!-- greeting + actions -->
+  <text x="28" y="120" fill="#8a93a5" font-size="10.5" letter-spacing="1.2" font-weight="600">DASHBOARD · SAFEGUARD CYCLE 2026</text>
+  <text x="28" y="150" fill="#0f1b30" font-size="25" font-weight="700">Good afternoon, County Team</text>
+  <text x="28" y="177" fill="#5b6472" font-size="12.5">Your IRS Pub 1075 safeguard review is on track. Keep submitting</text>
+  <text x="28" y="195" fill="#5b6472" font-size="12.5">evidence for open corrective actions before the 8-day deadline.</text>
+  <rect x="28" y="212" width="170" height="38" rx="8" fill="#14233f"/>
+  <text x="113" y="236" text-anchor="middle" fill="#ffffff" font-size="12.5" font-weight="600">Continue inspection ›</text>
+  <rect x="208" y="212" width="186" height="38" rx="8" fill="#ffffff" stroke="#d5dae2"/>
+  <text x="301" y="236" text-anchor="middle" fill="#12203c" font-size="12">Review corrective actions</text>
+
+  <!-- progress card -->
+  <rect x="470" y="104" width="322" height="146" rx="12" fill="#ffffff" stroke="#e5e8ee"/>
+  <text x="490" y="132" fill="#8a93a5" font-size="10.5" letter-spacing="1.1" font-weight="600">CYCLE PROGRESS</text>
+  <text x="772" y="137" text-anchor="end" fill="#0f1b30" font-size="22" font-weight="700">62%</text>
+  <rect x="490" y="147" width="282" height="7" rx="4" fill="#eceff3"/>
+  <rect x="490" y="147" width="175" height="7" rx="4" fill="#14233f"/>
+  <line x1="490" y1="174" x2="772" y2="174" stroke="#eef1f5"/>
+  <text x="490" y="196" fill="#8a93a5" font-size="11.5">Framework</text>
+  <text x="772" y="196" text-anchor="end" fill="#16233b" font-size="11.5" font-weight="600">IRS Pub 1075</text>
+  <text x="490" y="218" fill="#8a93a5" font-size="11.5">Next milestone</text>
+  <text x="772" y="218" text-anchor="end" fill="#16233b" font-size="11.5" font-weight="600">Aug 21, 2026</text>
+  <text x="490" y="240" fill="#8a93a5" font-size="11.5">Status</text>
+  <text x="772" y="240" text-anchor="end" fill="#1a7f5a" font-size="11.5" font-weight="600">On track</text>
+
+  <!-- stat cards -->
+  <g>
+    <rect x="28" y="270" width="182" height="68" rx="10" fill="#ffffff" stroke="#e5e8ee"/>
+    <text x="44" y="291" fill="#8a93a5" font-size="9.5" letter-spacing="0.6" font-weight="600">CYCLE COMPLETION</text>
+    <text x="44" y="317" fill="#0f1b30" font-size="20" font-weight="700">62%</text>
+    <text x="44" y="331" fill="#1a7f5a" font-size="9.5" font-weight="600">↑ +18% this month</text>
+  </g>
+  <g>
+    <rect x="222" y="270" width="182" height="68" rx="10" fill="#ffffff" stroke="#e5e8ee"/>
+    <text x="238" y="291" fill="#8a93a5" font-size="9.5" letter-spacing="0.6" font-weight="600">OPEN ACTIONS</text>
+    <text x="238" y="317" fill="#0f1b30" font-size="20" font-weight="700">4</text>
+    <text x="238" y="331" fill="#6b7484" font-size="9.5">2 due within 14 days</text>
+  </g>
+  <g>
+    <rect x="416" y="270" width="182" height="68" rx="10" fill="#ffffff" stroke="#e5e8ee"/>
+    <text x="432" y="291" fill="#8a93a5" font-size="9.5" letter-spacing="0.6" font-weight="600">DAYS TO DEADLINE</text>
+    <text x="432" y="317" fill="#0f1b30" font-size="20" font-weight="700">8</text>
+    <text x="432" y="331" fill="#6b7484" font-size="9.5">CAP evidence · Aug 21</text>
+  </g>
+  <g>
+    <rect x="610" y="270" width="182" height="68" rx="10" fill="#ffffff" stroke="#e5e8ee"/>
+    <text x="626" y="291" fill="#8a93a5" font-size="9.5" letter-spacing="0.6" font-weight="600">ASSIGNED TEAM</text>
+    <text x="626" y="315" fill="#0f1b30" font-size="15" font-weight="700">Field Operations</text>
+    <text x="626" y="331" fill="#6b7484" font-size="9.5">OCSS · redacted</text>
+  </g>
+
+  <!-- timeline card -->
+  <rect x="28" y="352" width="430" height="188" rx="12" fill="#ffffff" stroke="#e5e8ee"/>
+  <text x="48" y="381" fill="#0f1b30" font-size="14" font-weight="700">Cycle timeline</text>
+  <text x="48" y="399" fill="#8a93a5" font-size="10.5">IRS Publication 1075 · three-year review</text>
+  <line x1="53" y1="420" x2="53" y2="522" stroke="#e5e8ee" stroke-width="2"/>
+  <!-- item 1 -->
+  <circle cx="53" cy="422" r="5.5" fill="#1a7f5a"/>
+  <text x="72" y="420" fill="#16233b" font-size="12" font-weight="600">Kickoff letter issued</text>
+  <text x="72" y="434" fill="#8a93a5" font-size="10">May 12, 2026</text>
+  <rect x="372" y="411" width="66" height="18" rx="9" fill="#e7f5ee"/>
+  <text x="405" y="424" text-anchor="middle" fill="#1a7f5a" font-size="9" font-weight="600">COMPLETE</text>
+  <!-- item 2 -->
+  <circle cx="53" cy="456" r="5.5" fill="#1a7f5a"/>
+  <text x="72" y="454" fill="#16233b" font-size="12" font-weight="600">On-site inspection completed</text>
+  <text x="72" y="468" fill="#8a93a5" font-size="10">Jul 08, 2026</text>
+  <rect x="372" y="445" width="66" height="18" rx="9" fill="#e7f5ee"/>
+  <text x="405" y="458" text-anchor="middle" fill="#1a7f5a" font-size="9" font-weight="600">COMPLETE</text>
+  <!-- item 3 -->
+  <circle cx="53" cy="490" r="5.5" fill="#d99b1c"/>
+  <text x="72" y="488" fill="#16233b" font-size="12" font-weight="600">Corrective action evidence due</text>
+  <text x="72" y="502" fill="#8a93a5" font-size="10">Aug 21, 2026</text>
+  <rect x="360" y="479" width="78" height="18" rx="9" fill="#fdf3dc"/>
+  <text x="399" y="492" text-anchor="middle" fill="#9a6b12" font-size="9" font-weight="600">IN PROGRESS</text>
+  <!-- item 4 -->
+  <circle cx="53" cy="522" r="5.5" fill="#c3c9d4"/>
+  <text x="72" y="520" fill="#16233b" font-size="12" font-weight="600">Cycle close &amp; IRS packet</text>
+  <text x="72" y="534" fill="#8a93a5" font-size="10">Sep 15, 2026</text>
+  <rect x="372" y="511" width="66" height="18" rx="9" fill="#eef0f4"/>
+  <text x="405" y="524" text-anchor="middle" fill="#6b7484" font-size="9" font-weight="600">UPCOMING</text>
+
+  <!-- assistant panel -->
+  <rect x="470" y="352" width="322" height="188" rx="12" fill="#ffffff" stroke="#e5e8ee"/>
+  <rect x="486" y="367" width="24" height="24" rx="7" fill="#14233f"/>
+  <path d="M492 379 l3 3 L505 373" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="518" y="380" fill="#0f1b30" font-size="12.5" font-weight="700">Safeguard Assistant</text>
+  <circle cx="521" cy="392" r="3" fill="#1a7f5a"/>
+  <text x="530" y="396" fill="#8a93a5" font-size="9.5">AI agent · always on</text>
+  <line x1="486" y1="406" x2="776" y2="406" stroke="#eef1f5"/>
+  <!-- user bubble -->
+  <rect x="546" y="416" width="230" height="40" rx="11" fill="#eef1f5"/>
+  <text x="762" y="432" text-anchor="end" fill="#16233b" font-size="10.5">How do I prep for the Pub 1075</text>
+  <text x="762" y="447" text-anchor="end" fill="#16233b" font-size="10.5">review before the deadline?</text>
+  <!-- assistant bubble -->
+  <rect x="486" y="466" width="256" height="60" rx="11" fill="#f4f6f9" stroke="#e9edf2"/>
+  <text x="500" y="484" fill="#16233b" font-size="10.5">Start with your open corrective</text>
+  <text x="500" y="499" fill="#16233b" font-size="10.5">actions. Upload evidence for</text>
+  <text x="500" y="514" fill="#16233b" font-size="10.5">CAP-00001, then mark it In Review.</text>
+</svg>
