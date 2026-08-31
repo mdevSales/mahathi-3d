@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 336" font-family="ui-monospace, 'IBM Plex Mono', monospace" font-size="13">
+  <!-- card -->
+  <rect x="0.5" y="0.5" width="459" height="335" rx="12" fill="#120f18" stroke="#ffffff22"/>
+  <!-- title bar -->
+  <g>
+    <circle cx="22" cy="22" r="5" fill="#ffffff26"/>
+    <circle cx="40" cy="22" r="5" fill="#ffffff1a"/>
+    <circle cx="58" cy="22" r="5" fill="#ffffff14"/>
+    <text x="230" y="26" text-anchor="middle" fill="#6f6a7d" font-size="11" letter-spacing="0.5">caseworker.agent</text>
+  </g>
+  <line x1="0" y1="44" x2="460" y2="44" stroke="#ffffff14"/>
+  <!-- gutter -->
+  <g fill="#413d52" font-size="11" text-anchor="end">
+    <text x="34" y="74">1</text>
+    <text x="34" y="95">2</text>
+    <text x="34" y="116">3</text>
+    <text x="34" y="137">4</text>
+    <text x="34" y="158">5</text>
+    <text x="34" y="179">6</text>
+    <text x="34" y="200">7</text>
+    <text x="34" y="221">8</text>
+    <text x="34" y="242">9</text>
+    <text x="34" y="263">10</text>
+    <text x="34" y="284">11</text>
+    <text x="34" y="305">12</text>
+  </g>
+  <!-- code -->
+  <g xml:space="preserve">
+    <text x="48" y="74"><tspan fill="#b98bf5">topic</tspan><tspan fill="#c4b5fd"> AssessmentIntake</tspan><tspan fill="#78738a"> {</tspan></text>
+    <text x="48" y="95"><tspan fill="#78738a">  </tspan><tspan fill="#b98bf5">scope</tspan><tspan fill="#cbb892"> "in-home care assessments"</tspan></text>
+    <text x="48" y="137"><tspan fill="#78738a">  </tspan><tspan fill="#b98bf5">action</tspan><tspan fill="#c4b5fd"> triageBacklog</tspan><tspan fill="#9b96a8">(deadline)</tspan></text>
+    <text x="48" y="158"><tspan fill="#78738a">  </tspan><tspan fill="#b98bf5">action</tspan><tspan fill="#c4b5fd"> parseNotes</tspan><tspan fill="#9b96a8">(audio)</tspan><tspan fill="#78738a"> -&gt; </tspan><tspan fill="#c4b5fd">Evidence</tspan></text>
+    <text x="48" y="179"><tspan fill="#78738a">  </tspan><tspan fill="#b98bf5">action</tspan><tspan fill="#c4b5fd"> rankEligibility</tspan><tspan fill="#9b96a8">(ev)</tspan><tspan fill="#78738a"> -&gt; </tspan><tspan fill="#c4b5fd">Ranking[]</tspan></text>
+    <text x="48" y="200"><tspan fill="#78738a">  </tspan><tspan fill="#b98bf5">action</tspan><tspan fill="#c4b5fd"> draftNarrative</tspan><tspan fill="#9b96a8">(ranking)</tspan></text>
+    <text x="48" y="221"><tspan fill="#78738a">  </tspan><tspan fill="#b98bf5">action</tspan><tspan fill="#c4b5fd"> finalize</tspan><tspan fill="#9b96a8">()</tspan><tspan fill="#b98bf5"> on</tspan><tspan fill="#cbc7d4"> approval</tspan></text>
+    <text x="48" y="263"><tspan fill="#78738a">  </tspan><tspan fill="#b98bf5">guardrail</tspan><tspan fill="#cbc7d4"> no free-text eligibility</tspan></text>
+    <text x="48" y="284"><tspan fill="#78738a">  </tspan><tspan fill="#b98bf5">returns</tspan><tspan fill="#c4b5fd"> RecordCard</tspan><tspan fill="#6f6a7d">   // native UI, not chat</tspan></text>
+    <text x="48" y="305"><tspan fill="#78738a">}</tspan></text>
+  </g>
+</svg>

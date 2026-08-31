@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant:ital,wght@1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./style.css?v=11" />
+  <link rel="stylesheet" href="./style.css?v=12" />
 </head>
 <body>
   <!-- Layered CSS backdrop (near-black + soft violet glow + grain) -->
@@ -111,8 +111,16 @@
               <span class="book-tag">County · Social Services</span>
               <h4>Caseworker Copilot</h4>
               <p class="book-sub">The paperwork, handled in chat.</p>
-              <p class="book-desc">An in-home-care caseworker agent that runs the whole assessment as a conversation. It triages the backlog by deadline, turns dictated visit notes into structured evidence, proposes eligibility rankings with the regulatory justification behind them, drafts the narrative, and finalizes once a human approves. Every step comes back as a native record card, so there's no free-text guesswork.</p>
-              <div class="book-tech"><span>Agentforce</span><span>Read + write actions</span><span>Record cards</span></div>
+              <div class="book-split">
+                <div class="book-split-text">
+                  <p class="book-desc">An in-home-care caseworker agent that runs the whole assessment as a conversation. It triages the backlog by deadline, turns dictated visit notes into structured evidence, proposes eligibility rankings with the regulatory justification behind them, drafts the narrative, and finalizes once a human approves. Every step comes back as a native record card, so there's no free-text guesswork.</p>
+                  <div class="book-tech"><span>Agentforce</span><span>Read + write actions</span><span>Record cards</span></div>
+                </div>
+                <figure class="book-figure">
+                  <img src="./caseworker-agent.svg" alt="Illustrative Agent Script for the caseworker assessment agent, showing triage, note parsing, eligibility ranking, narrative drafting, and a record-card return." loading="lazy" />
+                  <figcaption>Illustrative agent structure. No customer data.</figcaption>
+                </figure>
+              </div>
             </template>
           </button>
           <button class="spine" style="--c1:#4c5a86;--c2:#7a5580;--h:232px" aria-label="Open: Grantmaking Agent">

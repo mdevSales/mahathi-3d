@@ -382,6 +382,23 @@ section { position: relative; z-index: 2; }
   background: var(--surface-2); border: 1px solid var(--border); color: var(--text);
 }
 
+/* two-column book layout — description beside a code-style graphic */
+.book-modal-card:has(.book-split) { width: min(860px, 100%); }
+.book-split { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: start; }
+.book-split-text { min-width: 0; }
+.book-figure { margin: 0; }
+.book-figure img {
+  width: 100%; height: auto; display: block; border-radius: 10px;
+  border: 1px solid var(--border); background: #120f18;
+}
+.book-figure figcaption {
+  margin-top: 8px; font-family: var(--font-mono); font-size: 0.68rem;
+  letter-spacing: 0.03em; color: var(--muted-2); text-align: center;
+}
+@media (max-width: 640px) {
+  .book-split { grid-template-columns: 1fr; gap: 20px; }
+}
+
 @media (max-width: 560px) { .spines { gap: 8px; } .spine { width: 46px; } }
 
 /* ---------- Moments gallery ---------- */
