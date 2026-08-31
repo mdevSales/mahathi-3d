@@ -13,12 +13,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant:ital,wght@1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./style.css?v=9" />
+  <link rel="stylesheet" href="./style.css?v=10" />
 </head>
 <body>
-  <!-- 3D canvas lives behind everything -->
-  <canvas id="galaxy"></canvas>
-  <div class="overlay"></div>
+  <!-- Layered CSS backdrop (near-black + soft violet glow + grain) -->
+  <div class="backdrop" aria-hidden="true">
+    <div class="backdrop-glow"></div>
+    <div class="backdrop-grain"></div>
+  </div>
 
   <!-- Sticky nav -->
   <header class="nav">
@@ -52,7 +54,7 @@
         <a href="mailto:mdevulapalli@salesforce.com">Get in touch</a>
       </nav>
     </div>
-    <p class="hint">scroll · or steer the galaxy with your cursor</p>
+    <p class="hint">scroll to explore</p>
   </section>
 
   <!-- ============ ABOUT ============ -->
@@ -270,11 +272,11 @@
             <span class="spine-title">This Site</span>
             <span class="spine-band"></span>
             <template class="spine-detail">
-              <span class="book-tag">Creative · WebGL</span>
+              <span class="book-tag">Creative · Web</span>
               <h4>This Site</h4>
               <p class="book-sub">You're standing in it.</p>
-              <p class="book-desc">A three.js particle galaxy in my brand colors, hand-built shaders and all, because a portfolio should feel like the person behind it. And yes, I built the thing you're scrolling through right now.</p>
-              <div class="book-tech"><span>three.js</span><span>GLSL shaders</span><span>Vanilla JS</span></div>
+              <p class="book-desc">A hand-built portfolio in my own brand colors, down to the drifting backdrop and the little book you just opened, because a portfolio should feel like the person behind it. And yes, I built the thing you're reading right now.</p>
+              <div class="book-tech"><span>Vanilla JS</span><span>CSS</span><span>Design system</span></div>
             </template>
           </button>
         </div>
@@ -444,11 +446,6 @@
     <p class="foot">Come for the AI, stay for the yapping.</p>
   </section>
 
-  <!-- three.js from CDN via import map -->
-  <script type="importmap">
-    { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
-  </script>
-  <script type="module" src="./main.js?v=7"></script>
-  <script src="./ui.js?v=9"></script>
+  <script src="./ui.js?v=10"></script>
 </body>
 </html>
