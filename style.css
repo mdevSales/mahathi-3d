@@ -186,6 +186,31 @@ section { position: relative; z-index: 2; }
 .qcard h3 { font-size: 1.12rem; margin-bottom: 10px; }
 .qcard p { color: var(--muted); line-height: 1.65; font-size: 0.98rem; }
 
+/* ---------- Moments gallery ---------- */
+.panel.wide { max-width: 1180px; }
+.gallery {
+  column-count: 3;
+  column-gap: 16px;
+}
+.gallery figure {
+  margin: 0 0 16px;
+  break-inside: avoid;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.gallery figure:hover {
+  transform: translateY(-4px);
+  border-color: var(--purple);
+  box-shadow: 0 14px 40px rgba(168, 85, 247, 0.3);
+}
+.gallery img { width: 100%; height: auto; display: block; }
+
+@media (max-width: 900px) { .gallery { column-count: 2; } }
+@media (max-width: 560px) { .gallery { column-count: 1; } }
+
 /* ---------- Contact ---------- */
 .contact { text-align: center; }
 .contact .kicker { color: var(--pink); }
