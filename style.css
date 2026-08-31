@@ -184,6 +184,13 @@ section { position: relative; z-index: 2; }
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
   animation: rise 0.9s var(--ease) both;
 }
+.brand-line {
+  margin-top: 20px; max-width: 620px;
+  font-size: clamp(1.15rem, 2.6vw, 1.55rem); font-weight: 600; line-height: 1.4;
+  letter-spacing: -0.01em; color: var(--text);
+  animation: rise 0.9s 0.08s var(--ease) both;
+}
+.brand-line em { font-style: normal; color: var(--accent); }
 .roles {
   margin-top: 22px; font-size: clamp(0.85rem, 2.1vw, 1.1rem); font-weight: 500;
   color: var(--text); display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
@@ -232,6 +239,22 @@ section { position: relative; z-index: 2; }
 .about-copy p { color: var(--muted); line-height: 1.8; margin-bottom: 18px; font-size: 1.02rem; }
 .about-copy b { color: var(--text); font-weight: 600; }
 
+/* Three pillars — what Mahathi is known for */
+.pillars {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 40px;
+}
+.pillar {
+  display: flex; flex-direction: column; gap: 8px;
+  padding: 22px 22px 24px; border-radius: 12px;
+  background: var(--surface); border: 1px solid var(--border);
+  transition: border-color 0.15s var(--ease), background 0.15s var(--ease), transform 0.15s var(--ease);
+}
+.pillar:hover { border-color: var(--border-strong); background: var(--surface-2); transform: translateY(-2px); }
+.pillar .ico { color: var(--accent); }
+.pillar b { font-size: 1.05rem; font-weight: 600; color: var(--text); margin-top: 4px; }
+.pillar span { color: var(--muted); font-size: 0.92rem; line-height: 1.55; }
+@media (max-width: 720px) { .pillars { grid-template-columns: 1fr; } }
+
 /* ---------- Experience / Receipts ---------- */
 .role-card {
   background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
@@ -241,6 +264,15 @@ section { position: relative; z-index: 2; }
 .role-head b { font-size: 1.1rem; font-weight: 600; }
 .sf-logo { height: 20px; width: auto; opacity: 0.85; }
 .role-card p { color: var(--muted); line-height: 1.65; }
+.role-lesson {
+  margin-top: 14px; padding-top: 16px; border-top: 1px solid var(--border);
+  color: var(--text); font-size: 0.98rem; line-height: 1.65;
+}
+.lesson-tag {
+  display: block; font-family: var(--font-mono); font-size: 0.68rem;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);
+  margin-bottom: 8px;
+}
 
 .cert-lead { color: var(--muted); line-height: 1.65; margin-bottom: 22px; font-size: 0.96rem; }
 .cert-lead a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border-strong); padding-bottom: 1px; transition: border-color 0.15s var(--ease); }
@@ -500,7 +532,7 @@ section { position: relative; z-index: 2; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .hero h1, .roles, .tagline, .links, .hint { animation: none; }
+  .hero h1, .brand-line, .roles, .tagline, .links, .hint { animation: none; }
   .hero-code-wrap, .hero-code { animation: none; }
   .hero-code .caret { animation: none; }
   .backdrop-glow { animation: none; }
