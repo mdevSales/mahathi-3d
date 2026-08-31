@@ -90,10 +90,11 @@ em, .book-sub { font-family: var(--font-poetic); font-style: italic; }
 
 /* Hamburger — hidden on desktop */
 .nav-toggle {
-  display: none; width: 40px; height: 40px; padding: 10px;
+  display: none; position: relative; z-index: 12;
+  width: 44px; height: 44px; padding: 12px;
   flex-direction: column; justify-content: space-between;
-  background: transparent; border: 1px solid var(--border); border-radius: 8px;
-  cursor: pointer; z-index: 12;
+  background: rgba(11,9,16,0.6); border: 1px solid var(--border); border-radius: 8px;
+  cursor: pointer;
 }
 .nav-toggle span {
   display: block; height: 2px; width: 100%; border-radius: 2px;
@@ -106,18 +107,21 @@ em, .book-sub { font-family: var(--font-poetic); font-style: italic; }
 @media (max-width: 720px) {
   .nav-toggle { display: flex; }
   .nav nav {
-    position: fixed; inset: 0 0 auto 0; top: 0; padding: 84px 28px 32px;
+    position: fixed; inset: 0 0 auto 0; top: 0; z-index: 11;
+    padding: 76px 24px 28px;
     flex-direction: column; gap: 4px;
-    background: rgba(11,9,16,0.96); backdrop-filter: blur(16px);
+    background: rgba(11,9,16,0.98); backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
     transform: translateY(-100%); opacity: 0; pointer-events: none;
     transition: transform 0.32s var(--ease), opacity 0.32s var(--ease);
+    max-height: 100dvh; overflow-y: auto;
   }
   .nav nav.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
   .nav nav a {
-    font-size: 1.35rem; font-weight: 600; color: var(--text);
-    padding: 14px 4px; border-bottom: 1px solid var(--border);
+    font-size: 1.3rem; font-weight: 600; color: var(--text);
+    padding: 15px 4px; border-bottom: 1px solid var(--border);
   }
+  .nav nav a:last-child { border-bottom: none; }
 }
 
 /* ---------- Shared section shell ---------- */
@@ -213,7 +217,8 @@ section { position: relative; z-index: 2; }
 /* ONE signature gradient — the name only, 2-stop tonally close */
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 9vw, 6.2rem); font-weight: 500; line-height: 0.98; letter-spacing: -0.03em;
+  font-size: clamp(2.7rem, 12vw, 6.2rem); font-weight: 500; line-height: 1.0; letter-spacing: -0.03em;
+  overflow-wrap: break-word;
   background: linear-gradient(105deg, #ffffff 30%, var(--accent) 100%);
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
   animation: rise 0.9s var(--ease) both;
