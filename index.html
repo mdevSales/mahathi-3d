@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant:ital,wght@1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./style.css?v=12" />
+  <link rel="stylesheet" href="./style.css?v=13" />
 </head>
 <body>
   <!-- Layered CSS backdrop (near-black + soft violet glow + grain) -->
@@ -38,21 +38,39 @@
 
   <!-- ============ HERO ============ -->
   <section id="top" class="hero">
-    <div class="content">
-      <p class="eyebrow"><svg class="ico ico-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Ashburn, VA &nbsp;·&nbsp; Global Public Sector</p>
-      <h1>Mahathi&nbsp;Devulapalli</h1>
-      <p class="roles">
-        <span>Principal Sales Engineer</span>
-        <span class="dot">·</span>
-        <span class="role-af"><img class="af-icon" src="./agentforce-icon-eb50.svg" alt="" aria-hidden="true" />Agentforce &amp; Salesforce AI SME</span>
-        <span class="dot">·</span>
-        <span>Storyteller</span>
-      </p>
-      <p class="tagline">The missions that matter most tend to run on the thinnest resources. My job is to make AI simple enough to actually <em>trust</em>, so the people serving the public can spend their time on the work only they can do.</p>
-      <nav class="links">
-        <a href="#about" class="primary">Explore my work</a>
-        <a href="mailto:mdevulapalli@salesforce.com">Get in touch</a>
-      </nav>
+    <div class="hero-grid">
+      <div class="content">
+        <p class="eyebrow"><svg class="ico ico-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Ashburn, VA &nbsp;·&nbsp; Global Public Sector</p>
+        <h1>Mahathi&nbsp;Devulapalli</h1>
+        <p class="roles">
+          <span>Principal Sales Engineer</span>
+          <span class="dot">·</span>
+          <span class="role-af"><img class="af-icon" src="./agentforce-icon-eb50.svg" alt="" aria-hidden="true" />Agentforce &amp; Salesforce AI SME</span>
+          <span class="dot">·</span>
+          <span>Storyteller</span>
+        </p>
+        <p class="tagline">The missions that matter most tend to run on the thinnest resources. My job is to make AI simple enough to actually <em>trust</em>, so the people serving the public can spend their time on the work only they can do.</p>
+        <nav class="links">
+          <a href="#about" class="primary">Explore my work</a>
+          <a href="mailto:mdevulapalli@salesforce.com">Get in touch</a>
+        </nav>
+      </div>
+
+      <!-- Live code card: an illustrative Agent Script (no customer data) -->
+      <div class="hero-code" aria-hidden="true">
+        <div class="code-bar"><i></i><i></i><i></i><span class="code-name">public_sector.agent</span></div>
+        <pre><span class="tok-key">agent</span> <span class="tok-type">PublicSectorCopilot</span> <span class="tok-pun">{</span>
+  <span class="tok-key">mission</span> <span class="tok-str">"make the hard part the mission, not the tool"</span>
+  <span class="tok-key">grounded_in</span> <span class="tok-type">TrustedData</span> <span class="tok-pun">·</span> <span class="tok-type">Policy</span>
+
+  <span class="tok-key">action</span> <span class="tok-type">triage</span><span class="tok-pun">(</span>backlog<span class="tok-pun">)</span> <span class="tok-pun">-&gt;</span> <span class="tok-type">Priorities</span>
+  <span class="tok-key">action</span> <span class="tok-type">draft</span><span class="tok-pun">(</span>evidence<span class="tok-pun">)</span> <span class="tok-pun">-&gt;</span> <span class="tok-type">Narrative</span>
+  <span class="tok-key">action</span> <span class="tok-type">finalize</span><span class="tok-pun">()</span> <span class="tok-key">on</span> approval
+
+  <span class="tok-key">guardrail</span> human_in_the_loop
+  <span class="tok-key">returns</span> <span class="tok-type">RecordCard</span>  <span class="tok-com">// clarity you can trust</span><span class="caret"></span>
+<span class="tok-pun">}</span></pre>
+      </div>
     </div>
     <p class="hint">scroll to explore</p>
   </section>
