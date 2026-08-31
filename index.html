@@ -6,49 +6,189 @@
   <title>Mahathi Devulapalli — AI Sales Engineer</title>
   <meta name="description" content="Mahathi Devulapalli — Principal Sales Engineer, Global Public Sector. Agentforce & Salesforce AI SME. I make complex AI feel obvious." />
 
-  <!-- Open Graph (nice link previews when shared) -->
   <meta property="og:title" content="Mahathi Devulapalli — AI Sales Engineer" />
   <meta property="og:description" content="Principal SE, Global Public Sector · Agentforce & Salesforce AI SME. I make complex AI feel obvious." />
   <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
   <!-- 3D canvas lives behind everything -->
   <canvas id="galaxy"></canvas>
-
-  <!-- Gradient wash + vignette over the canvas for depth -->
   <div class="overlay"></div>
 
-  <main class="content">
-    <p class="eyebrow">📍 Ashburn, VA &nbsp;·&nbsp; Global Public Sector</p>
-    <h1>Mahathi&nbsp;Devulapalli</h1>
-    <p class="roles">
-      <span>Principal Sales Engineer</span>
-      <span class="dot">·</span>
-      <span>Agentforce &amp; Salesforce AI SME</span>
-      <span class="dot">·</span>
-      <span>Storyteller</span>
-    </p>
-    <p class="tagline">I make complex AI feel <em>obvious</em> — helping government &amp; nonprofit teams put agents to work so they can do more good, faster.</p>
+  <!-- Sticky nav -->
+  <header class="nav">
+    <a href="#top" class="brand">M<span>.</span></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#community">Community</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
+  <!-- ============ HERO ============ -->
+  <section id="top" class="hero">
+    <div class="content">
+      <p class="eyebrow">📍 Ashburn, VA &nbsp;·&nbsp; Global Public Sector</p>
+      <h1>Mahathi&nbsp;Devulapalli</h1>
+      <p class="roles">
+        <span>Principal Sales Engineer</span>
+        <span class="dot">·</span>
+        <span>Agentforce &amp; Salesforce AI SME</span>
+        <span class="dot">·</span>
+        <span>Storyteller</span>
+      </p>
+      <p class="tagline">I make complex AI feel <em>obvious</em> — helping government &amp; nonprofit teams put agents to work so they can do more good, faster.</p>
+      <nav class="links">
+        <a href="#about" class="primary">Explore my work</a>
+        <a href="mailto:mdevulapalli@salesforce.com">Get in touch</a>
+      </nav>
+    </div>
+    <p class="hint">scroll ✦ the galaxy follows your cursor</p>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="panel reveal">
+    <span class="kicker">About</span>
+    <h2>Making the complex feel simple.</h2>
+    <div class="about-grid">
+      <!-- Swap this gradient avatar for a real photo: save me.jpg here and this becomes <img src="./me.jpg"> -->
+      <div class="avatar" aria-hidden="true"><span>M</span></div>
+      <div class="about-copy">
+        <p>I'm a Principal Sales Engineer in Salesforce's <b>Global Public Sector</b> org and an SME in <b>Agentforce &amp; Salesforce AI</b> — which is a formal way of saying I help government and nonprofit teams cut through the AI hype and put agents to work on the missions that matter.</p>
+        <p>My favorite part isn't the tech — it's the moment the room <i>gets it</i>. I take genuinely hard architecture and turn it into a story people can act on. (Yes, I'm a yapper. It turns out that's a useful skill.)</p>
+        <p>Outside the demos, I mentor engineers coming up behind me, champion nonprofits, and stay close to my South&nbsp;Asian community — because the best technology is the kind that lifts the people doing the hardest work.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE & CERTS ============ -->
+  <section id="experience" class="panel reveal">
+    <span class="kicker">Experience &amp; Credentials</span>
+    <h2>Certified, and always shipping.</h2>
+    <div class="role-card">
+      <div class="role-head">
+        <b>Principal Sales Engineer — Global Public Sector</b>
+        <span>Salesforce</span>
+      </div>
+      <p>Trusted advisor for AI &amp; Agentforce across government and mission-driven organizations — from first demo to production rollout.</p>
+    </div>
+    <div class="cert-grid">
+      <div class="cert">🤖 Agentforce Specialist</div>
+      <div class="cert">🏅 Agentblazer Legend</div>
+      <div class="cert">🧠 AI Associate &amp; AI Specialist</div>
+      <div class="cert">⚙️ Platform Administrator</div>
+      <div class="cert">🛠️ Salesforce Admin</div>
+      <div class="cert">📱 App Builder</div>
+      <div class="cert">🌐 Experience Cloud</div>
+    </div>
+    <div class="honors">
+      <div class="honor">
+        <span class="honor-mark">🏆</span>
+        <div><b>40 Under 40 — Northern Virginia</b><small>Recognized among the region's emerging leaders</small></div>
+      </div>
+      <div class="honor">
+        <span class="honor-mark">🤝</span>
+        <div><b>Presales Collective</b><small>Active member of the global SE community</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="panel reveal">
+    <span class="kicker">Skills &amp; Expertise</span>
+    <h2>What I bring to the table.</h2>
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-tab="ai" role="tab">AI</button>
+      <button class="tab" data-tab="sf" role="tab">Salesforce</button>
+      <button class="tab" data-tab="web" role="tab">Web &amp; Data</button>
+      <button class="tab" data-tab="story" role="tab">Storytelling</button>
+    </div>
+
+    <div class="tab-panels">
+      <div class="tab-panel active" data-panel="ai">
+        <span class="chip">Agentforce</span><span class="chip">Multi-agent orchestration</span>
+        <span class="chip">Prompt engineering</span><span class="chip">RAG &amp; grounding</span>
+        <span class="chip">Salesforce AI (Einstein)</span><span class="chip">Claude &amp; LLMs</span>
+        <span class="chip">Agent evaluation</span>
+      </div>
+      <div class="tab-panel" data-panel="sf">
+        <span class="chip">Apex</span><span class="chip">Lightning Web Components</span>
+        <span class="chip">Flow</span><span class="chip">Experience Cloud</span>
+        <span class="chip">Data Cloud</span><span class="chip">Platform administration</span>
+        <span class="chip">Integration</span>
+      </div>
+      <div class="tab-panel" data-panel="web">
+        <span class="chip">TypeScript</span><span class="chip">React</span>
+        <span class="chip">Node.js</span><span class="chip">Python</span>
+        <span class="chip">REST / GraphQL</span><span class="chip">SQL</span>
+      </div>
+      <div class="tab-panel" data-panel="story">
+        <span class="chip">Executive demos</span><span class="chip">Technical storytelling</span>
+        <span class="chip">Enablement &amp; workshops</span><span class="chip">Public speaking</span>
+        <span class="chip">Mentorship</span><span class="chip">Discovery &amp; solutioning</span>
+      </div>
+    </div>
+
+    <!-- Technical fingerprint -->
+    <div class="fingerprint">
+      <div class="fp-row"><span>Agentforce &amp; Salesforce AI</span><div class="bar"><i style="width:96%"></i></div></div>
+      <div class="fp-row"><span>Solution storytelling &amp; demos</span><div class="bar"><i style="width:94%"></i></div></div>
+      <div class="fp-row"><span>Salesforce platform</span><div class="bar"><i style="width:90%"></i></div></div>
+      <div class="fp-row"><span>AI architecture &amp; prompting</span><div class="bar"><i style="width:85%"></i></div></div>
+      <div class="fp-row"><span>Full-stack &amp; data</span><div class="bar"><i style="width:72%"></i></div></div>
+    </div>
+  </section>
+
+  <!-- ============ COMMUNITY ============ -->
+  <section id="community" class="panel reveal">
+    <span class="kicker">Community &amp; Beyond</span>
+    <h2>The work that isn't on a slide.</h2>
+    <div class="card-grid">
+      <div class="qcard">
+        <h3>🧑‍🏫 Mentorship &amp; Presales Collective</h3>
+        <p>An active member of the Presales Collective — I coach engineers and aspiring SEs to find their voice in the room and their footing in the platform.</p>
+      </div>
+      <div class="qcard">
+        <h3>💜 Nonprofit champion</h3>
+        <p>Helping mission-driven orgs punch above their weight with the right technology and a little strategic scrappiness.</p>
+      </div>
+      <div class="qcard">
+        <h3>🌏 Community &amp; culture</h3>
+        <p>Proud of my South Asian roots — I stay close to my community and love creating space for others to belong and rise.</p>
+      </div>
+      <div class="qcard">
+        <h3>📚 Reader &amp; storyteller</h3>
+        <p>Books by day, Netflix by night, strong opinions on plot pacing always. If it's a good story or a good outfit, I'm in.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="panel reveal contact">
+    <span class="kicker">Contact</span>
+    <h2>Let's connect ✨</h2>
+    <p class="contact-lead">Open to conversations about public-sector AI, Agentforce, mentorship — or just a good book recommendation.</p>
     <nav class="links">
-      <a href="https://www.linkedin.com/in/mahathidevulapalli/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/mahathidevulapalli/" target="_blank" rel="noopener" class="primary">LinkedIn</a>
       <a href="https://substack.com/@mahathi746620" target="_blank" rel="noopener">Substack</a>
       <a href="https://github.com/mdevSales" target="_blank" rel="noopener">GitHub</a>
       <a href="mailto:mdevulapalli@salesforce.com">Email</a>
     </nav>
-  </main>
-
-  <p class="hint">move your cursor ✦ the galaxy follows</p>
+    <p class="foot">Come for the AI, stay for the yapping. 💜</p>
+  </section>
 
   <!-- three.js from CDN via import map -->
   <script type="importmap">
     { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
   </script>
   <script type="module" src="./main.js"></script>
+  <script src="./ui.js"></script>
 </body>
 </html>
