@@ -361,15 +361,19 @@ section { position: relative; z-index: 2; }
 }
 
 /* ---------- Community ---------- */
-.card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+/* Open editorial text blocks — no boxes; a top hairline gives structure without card weight */
+.card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 56px; }
 .qcard {
-  background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
-  padding: 26px; transition: border-color 0.15s var(--ease), transform 0.15s var(--ease);
+  padding: 30px 0; border-top: 1px solid var(--border);
 }
-.qcard:hover { transform: translateY(-3px); border-color: var(--border-strong); }
-.qcard h3 { display: flex; align-items: center; gap: 10px; font-size: 1.05rem; font-weight: 600; margin-bottom: 12px; }
+.qcard h3 {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--font-display); font-weight: 500; font-size: 1.35rem;
+  letter-spacing: -0.01em; margin-bottom: 12px; color: var(--text);
+}
 .qcard h3 .ico { color: var(--accent); }
-.qcard p { color: var(--muted); line-height: 1.7; font-size: 0.96rem; }
+.qcard p { color: var(--muted); line-height: 1.7; font-size: 0.98rem; }
+@media (max-width: 720px) { .qcard { padding: 24px 0; } }
 
 /* Pro bono & volunteering — concrete engagements under the community themes */
 .give-title {
@@ -379,20 +383,23 @@ section { position: relative; z-index: 2; }
   letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
 }
 .give-title .ico { color: var(--accent); }
-.give-list { display: grid; gap: 12px; }
+/* editorial index — hairline-divided rows, no boxes, year set as a mono marginal note */
+.give-list { display: grid; gap: 0; border-top: 1px solid var(--border); }
 .give {
-  display: flex; gap: 16px; align-items: flex-start;
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: 12px; padding: 20px 22px;
-  transition: border-color 0.15s var(--ease);
+  display: grid; grid-template-columns: 22px 1fr; gap: 0 18px; align-items: start;
+  padding: 22px 4px; border-bottom: 1px solid var(--border);
+  transition: background 0.2s var(--ease); border-radius: 6px;
 }
-.give:hover { border-color: var(--border-strong); }
-.give > .ico { color: var(--accent); margin-top: 3px; }
-.give-body { flex: 1; min-width: 0; }
-.give-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 6px; }
-.give-head b { font-size: 1rem; font-weight: 600; }
-.give-when { font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted-2); white-space: nowrap; }
-.give p { color: var(--muted); line-height: 1.65; font-size: 0.94rem; }
+.give:hover { background: var(--surface); }
+.give > .ico { color: var(--accent); margin-top: 4px; }
+.give-body { min-width: 0; }
+.give-head { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; margin-bottom: 6px; }
+.give-head b { font-family: var(--font-display); font-size: 1.2rem; font-weight: 500; letter-spacing: -0.01em; }
+.give-when {
+  font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--muted-2); white-space: nowrap;
+}
+.give p { color: var(--muted); line-height: 1.65; font-size: 0.94rem; max-width: 68ch; }
 
 /* ---------- Work / Bookcase ---------- */
 .shelf-lead { color: var(--muted); line-height: 1.75; max-width: 660px; margin-bottom: 44px; font-size: 1.02rem; }
