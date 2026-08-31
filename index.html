@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./style.css?v=6" />
+  <link rel="stylesheet" href="./style.css?v=7" />
 </head>
 <body>
   <!-- 3D canvas lives behind everything -->
@@ -69,149 +69,157 @@
     </div>
   </section>
 
-  <!-- ============ WORK / BOOKSHELF ============ -->
+  <!-- ============ WORK / BOOKCASE ============ -->
   <section id="work" class="panel wide reveal">
     <span class="kicker">What I've built</span>
-    <h2>Pick a shelf. Every spine is a real build.</h2>
-    <p class="shelf-lead">A working library — agents and tools I've shipped for public-sector customers, the productivity kit I built to scale myself, and the things I make for love. Customer names stay off the cover; what the work <em>does</em> is the point.</p>
+    <h2>My shelf. Pull a book down.</h2>
+    <p class="shelf-lead">A working library — agents and tools I've shipped for public-sector customers, the productivity kit I built to scale myself, and the things I make for love. Pick any spine to open it. Customer names stay off the cover; what the work <em>does</em> is the point.</p>
 
-    <!-- Shelf 1 — Customer Work -->
-    <div class="shelf-block">
-      <div class="shelf-head">
-        <h3>🏛️ Customer Work <small>public sector · names hidden</small></h3>
-        <div class="shelf-nav"><button class="shelf-arrow" data-dir="-1" aria-label="Scroll left">‹</button><button class="shelf-arrow" data-dir="1" aria-label="Scroll right">›</button></div>
+    <div class="bookcase">
+      <!-- Shelf 1 — Customer Work -->
+      <div class="shelf-row">
+        <div class="shelf-label">🏛️ Customer Work <small>public sector · names hidden</small></div>
+        <div class="spines">
+          <button class="spine" style="--c1:#6366f1;--c2:#a855f7;--h:250px" aria-label="Open: Voice-First Analytics">
+            <span class="spine-title">Voice-First Analytics</span>
+            <span class="spine-band"></span>
+            <template class="spine-detail">
+              <span class="book-tag">Transit · Accessibility</span>
+              <h4>Voice-First Analytics</h4>
+              <p class="book-sub">Speak to a dashboard. Hear the answer.</p>
+              <p class="book-desc">A voice interface that lets blind and low-vision users query live dashboard data out loud — "how many trips were cancelled last month?" — and hear it back. Built with a 3-person team for an accessibility hackathon; I owned the solution narrative and the utterance library that kept the demo honest.</p>
+              <div class="book-tech"><span>Agentforce</span><span>Data Cloud</span><span>Apex</span><span>Web Speech API</span></div>
+            </template>
+          </button>
+          <button class="spine" style="--c1:#a855f7;--c2:#ec4899;--h:224px" aria-label="Open: Compliance Command Center">
+            <span class="spine-title">Compliance Command Center</span>
+            <span class="spine-band"></span>
+            <template class="spine-detail">
+              <span class="book-tag">State Agency · Compliance</span>
+              <h4>Compliance Command Center</h4>
+              <p class="book-sub">IRS Pub 1075 safeguard, at a glance.</p>
+              <p class="book-desc">An analytics command center for federal tax-information safeguard inspections across every county — compliance rate, open corrective-action plans, overdue items and repeat findings, with a drill-down map from national to county level. Turns a dense audit obligation into a story a program manager can act on.</p>
+              <div class="book-tech"><span>Tableau-style viz</span><span>GeoJSON drill-down</span><span>Data blending</span></div>
+            </template>
+          </button>
+          <button class="spine" style="--c1:#ec4899;--c2:#f59e0b;--h:242px" aria-label="Open: Caseworker Copilot">
+            <span class="spine-title">Caseworker Copilot</span>
+            <span class="spine-band"></span>
+            <template class="spine-detail">
+              <span class="book-tag">County · Social Services</span>
+              <h4>Caseworker Copilot</h4>
+              <p class="book-sub">The paperwork, handled — by chat.</p>
+              <p class="book-desc">An in-home-care caseworker agent that runs the whole assessment in conversation: triage the backlog by deadline, parse dictated visit notes into structured evidence, propose eligibility rankings with regulatory justification, draft the narrative, and finalize on approval. Every step returns a native record card — no free-text guesswork.</p>
+              <div class="book-tech"><span>Agentforce</span><span>Read + write actions</span><span>Record cards</span></div>
+            </template>
+          </button>
+          <button class="spine" style="--c1:#6366f1;--c2:#ec4899;--h:232px" aria-label="Open: Grantmaking Agent">
+            <span class="spine-title">Grantmaking Agent</span>
+            <span class="spine-band"></span>
+            <template class="spine-detail">
+              <span class="book-tag">Public Sector · Grants</span>
+              <h4>Grantmaking Agent</h4>
+              <p class="book-sub">From application to award, with a human in the loop.</p>
+              <p class="book-desc">A build methodology for grantmaking agents on Public Sector Cloud — license pre-flight, structured discovery, an 11-action catalog (summarize, score, notify, dedupe), and a hard scoping gate that confirms which programs and eligibility rules to build against before a line of code is written. Includes verification gates and human handoff for public-facing use.</p>
+              <div class="book-tech"><span>PSC Grantmaking</span><span>Prompt templates</span><span>Data 360</span><span>Business Rules</span></div>
+            </template>
+          </button>
+        </div>
+        <div class="ledge"></div>
       </div>
-      <div class="shelf" tabindex="0">
-        <article class="book" style="--c1:#6366f1;--c2:#a855f7">
-          <div class="book-spine"></div>
-          <div class="book-face">
-            <span class="book-tag">Transit · Accessibility</span>
-            <h4>Voice-First Analytics</h4>
-            <p class="book-sub">Speak to a dashboard. Hear the answer.</p>
-            <p class="book-desc">A voice interface that lets blind and low-vision users query live dashboard data out loud — "how many trips were cancelled last month?" — and hear it back. Built with a 3-person team for an accessibility hackathon; I owned the solution narrative and the utterance library that kept the demo honest.</p>
-            <div class="book-tech"><span>Agentforce</span><span>Data Cloud</span><span>Apex</span><span>Web Speech API</span></div>
-          </div>
-        </article>
 
-        <article class="book" style="--c1:#a855f7;--c2:#ec4899">
-          <div class="book-spine"></div>
-          <div class="book-face">
-            <span class="book-tag">State Agency · Compliance</span>
-            <h4>Compliance Command Center</h4>
-            <p class="book-sub">IRS Pub 1075 safeguard, at a glance.</p>
-            <p class="book-desc">An analytics command center for federal tax-information safeguard inspections across every county — compliance rate, open corrective-action plans, overdue items and repeat findings, with a drill-down map from national to county level. Turns a dense audit obligation into a story a program manager can act on.</p>
-            <div class="book-tech"><span>Tableau-style viz</span><span>GeoJSON drill-down</span><span>Data blending</span></div>
-          </div>
-        </article>
-
-        <article class="book" style="--c1:#ec4899;--c2:#f59e0b">
-          <div class="book-spine"></div>
-          <div class="book-face">
-            <span class="book-tag">County · Social Services</span>
-            <h4>Caseworker Copilot</h4>
-            <p class="book-sub">The paperwork, handled — by chat.</p>
-            <p class="book-desc">An in-home-care caseworker agent that runs the whole assessment in conversation: triage the backlog by deadline, parse dictated visit notes into structured evidence, propose eligibility rankings with regulatory justification, draft the narrative, and finalize on approval. Every step returns a native record card — no free-text guesswork.</p>
-            <div class="book-tech"><span>Agentforce</span><span>Read + write actions</span><span>Record cards</span></div>
-          </div>
-        </article>
-
-        <article class="book" style="--c1:#6366f1;--c2:#ec4899">
-          <div class="book-spine"></div>
-          <div class="book-face">
-            <span class="book-tag">Public Sector · Grants</span>
-            <h4>Grantmaking Agent</h4>
-            <p class="book-sub">From application to award, with a human in the loop.</p>
-            <p class="book-desc">A build methodology for grantmaking agents on Public Sector Cloud — license pre-flight, structured discovery, an 11-action catalog (summarize, score, notify, dedupe), and a hard scoping gate that confirms which programs and eligibility rules to build against before a line of code is written. Includes verification gates and human handoff for public-facing use.</p>
-            <div class="book-tech"><span>PSC Grantmaking</span><span>Prompt templates</span><span>Data 360</span><span>Business Rules</span></div>
-          </div>
-        </article>
+      <!-- Shelf 2 — SE Productivity -->
+      <div class="shelf-row">
+        <div class="shelf-label">⚡ SE Productivity <small>tools I built to scale myself</small></div>
+        <div class="spines">
+          <button class="spine" style="--c1:#a855f7;--c2:#6366f1;--h:246px" aria-label="Open: Agent Provisioner">
+            <span class="spine-title">Agent Provisioner</span>
+            <span class="spine-band"></span>
+            <template class="spine-detail">
+              <span class="book-tag">Reusable Skill</span>
+              <h4>Agent Provisioner</h4>
+              <p class="book-sub">A working agent in ~3 minutes.</p>
+              <p class="book-desc">A one-command skill that stands up a complete "lost &amp; found" service agent in any org — autolaunched Flow, a 3-subagent script, and an Apex smoke test that proves it works against real validation rules. Bakes in the gotchas I've hit so the next build doesn't have to.</p>
+              <div class="book-tech"><span>Agentforce Scripting</span><span>Flow</span><span>Apex</span></div>
+            </template>
+          </button>
+          <button class="spine" style="--c1:#ec4899;--c2:#a855f7;--h:228px" aria-label="Open: PitchCraft">
+            <span class="spine-title">PitchCraft</span>
+            <span class="spine-band"></span>
+            <template class="spine-detail">
+              <span class="book-tag">Enablement</span>
+              <h4>PitchCraft</h4>
+              <p class="book-sub">On-brand pitch decks, on demand.</p>
+              <p class="book-desc">A skill that turns a rough solution idea into a polished, brand-consistent pitch narrative — so the story is ready before the room is. Built to make great demos repeatable, not heroic.</p>
+              <div class="book-tech"><span>Prompt design</span><span>Brand system</span></div>
+            </template>
+          </button>
+          <button class="spine" style="--c1:#6366f1;--c2:#a855f7;--h:240px" aria-label="Open: Demo Dashboard Builder">
+            <span class="spine-title">Demo Dashboard Builder</span>
+            <span class="spine-band"></span>
+            <template class="spine-detail">
+              <span class="book-tag">Demo Tooling</span>
+              <h4>Demo Dashboard Builder</h4>
+              <p class="book-sub">Believable data, in minutes.</p>
+              <p class="book-desc">A skill that spins up realistic, illustrative dashboards for a demo scenario — so a discovery conversation can show, not just tell. Fewer hours in spreadsheets, more time on the story that matters.</p>
+              <div class="book-tech"><span>Data viz</span><span>Chart.js</span><span>Mock data</span></div>
+            </template>
+          </button>
+          <button class="spine" style="--c1:#a855f7;--c2:#ec4899;--h:220px" aria-label="Open: Demo Script Generator">
+            <span class="spine-title">Demo Script Generator</span>
+            <span class="spine-band"></span>
+            <template class="spine-detail">
+              <span class="book-tag">Demo Tooling</span>
+              <h4>Demo Script Generator</h4>
+              <p class="book-sub">The walkthrough writes itself.</p>
+              <p class="book-desc">A skill that produces clean, copy-paste demo scripts from a scenario — the click-path, the talk-track, the "here's what just happened" — so any SE can run the story the same way twice.</p>
+              <div class="book-tech"><span>Structured output</span><span>Enablement</span></div>
+            </template>
+          </button>
+        </div>
+        <div class="ledge"></div>
       </div>
-    </div>
 
-    <!-- Shelf 2 — SE Productivity -->
-    <div class="shelf-block">
-      <div class="shelf-head">
-        <h3>⚡ SE Productivity <small>tools I built to scale myself</small></h3>
-        <div class="shelf-nav"><button class="shelf-arrow" data-dir="-1" aria-label="Scroll left">‹</button><button class="shelf-arrow" data-dir="1" aria-label="Scroll right">›</button></div>
-      </div>
-      <div class="shelf" tabindex="0">
-        <article class="book" style="--c1:#a855f7;--c2:#6366f1">
-          <div class="book-spine"></div>
-          <div class="book-face">
-            <span class="book-tag">Reusable Skill</span>
-            <h4>Agent Provisioner</h4>
-            <p class="book-sub">A working agent in ~3 minutes.</p>
-            <p class="book-desc">A one-command skill that stands up a complete "lost &amp; found" service agent in any org — autolaunched Flow, a 3-subagent script, and an Apex smoke test that proves it works against real validation rules. Bakes in the gotchas I've hit so the next build doesn't have to.</p>
-            <div class="book-tech"><span>Agentforce Scripting</span><span>Flow</span><span>Apex</span></div>
-          </div>
-        </article>
-
-        <article class="book" style="--c1:#ec4899;--c2:#a855f7">
-          <div class="book-spine"></div>
-          <div class="book-face">
-            <span class="book-tag">Enablement</span>
-            <h4>PitchCraft</h4>
-            <p class="book-sub">On-brand pitch decks, on demand.</p>
-            <p class="book-desc">A skill that turns a rough solution idea into a polished, brand-consistent pitch narrative — so the story is ready before the room is. Built to make great demos repeatable, not heroic.</p>
-            <div class="book-tech"><span>Prompt design</span><span>Brand system</span></div>
-          </div>
-        </article>
-
-        <article class="book" style="--c1:#6366f1;--c2:#a855f7">
-          <div class="book-spine"></div>
-          <div class="book-face">
-            <span class="book-tag">Demo Tooling</span>
-            <h4>Demo Dashboard Builder</h4>
-            <p class="book-sub">Believable data, in minutes.</p>
-            <p class="book-desc">A skill that spins up realistic, illustrative dashboards for a demo scenario — so a discovery conversation can show, not just tell. Fewer hours in spreadsheets, more time on the story that matters.</p>
-            <div class="book-tech"><span>Data viz</span><span>Chart.js</span><span>Mock data</span></div>
-          </div>
-        </article>
-
-        <article class="book" style="--c1:#a855f7;--c2:#ec4899">
-          <div class="book-spine"></div>
-          <div class="book-face">
-            <span class="book-tag">Demo Tooling</span>
-            <h4>Demo Script Generator</h4>
-            <p class="book-sub">The walkthrough writes itself.</p>
-            <p class="book-desc">A skill that produces clean, copy-paste demo scripts from a scenario — the click-path, the talk-track, the "here's what just happened" — so any SE can run the story the same way twice.</p>
-            <div class="book-tech"><span>Structured output</span><span>Enablement</span></div>
-          </div>
-        </article>
-      </div>
-    </div>
-
-    <!-- Shelf 3 — Personal -->
-    <div class="shelf-block">
-      <div class="shelf-head">
-        <h3>💜 Personal <small>things I make for love</small></h3>
-        <div class="shelf-nav"><button class="shelf-arrow" data-dir="-1" aria-label="Scroll left">‹</button><button class="shelf-arrow" data-dir="1" aria-label="Scroll right">›</button></div>
-      </div>
-      <div class="shelf" tabindex="0">
-        <article class="book" style="--c1:#ec4899;--c2:#6366f1">
-          <div class="book-spine"></div>
-          <div class="book-face">
-            <span class="book-tag">Full-Stack · AI</span>
-            <h4>BrandOS</h4>
-            <p class="book-sub">Build your LinkedIn brand in one sitting.</p>
-            <p class="book-desc">A privacy-first web app that walks someone through their personal brand in a single 45-minute session — voice, positioning, a rewritten profile, post ideas and a 30-day plan — with a "humanizer" pass that strips the AI tells. Runs my South Asian community brand workshops.</p>
-            <div class="book-tech"><span>Next.js</span><span>TypeScript</span><span>Claude API</span><span>Prisma</span></div>
-          </div>
-        </article>
-
-        <article class="book" style="--c1:#a855f7;--c2:#ec4899">
-          <div class="book-spine"></div>
-          <div class="book-face">
-            <span class="book-tag">Creative · WebGL</span>
-            <h4>This Site</h4>
-            <p class="book-sub">You're standing in it.</p>
-            <p class="book-desc">A three.js particle galaxy in my brand colors, hand-built shaders and all, because a portfolio should feel like the person. Yes — I built the thing you're scrolling through.</p>
-            <div class="book-tech"><span>three.js</span><span>GLSL shaders</span><span>Vanilla JS</span></div>
-          </div>
-        </article>
+      <!-- Shelf 3 — Personal -->
+      <div class="shelf-row">
+        <div class="shelf-label">💜 Personal <small>things I make for love</small></div>
+        <div class="spines">
+          <button class="spine" style="--c1:#ec4899;--c2:#6366f1;--h:244px" aria-label="Open: BrandOS">
+            <span class="spine-title">BrandOS</span>
+            <span class="spine-band"></span>
+            <template class="spine-detail">
+              <span class="book-tag">Full-Stack · AI</span>
+              <h4>BrandOS</h4>
+              <p class="book-sub">Build your LinkedIn brand in one sitting.</p>
+              <p class="book-desc">A privacy-first web app that walks someone through their personal brand in a single 45-minute session — voice, positioning, a rewritten profile, post ideas and a 30-day plan — with a "humanizer" pass that strips the AI tells. Runs my South Asian community brand workshops.</p>
+              <div class="book-tech"><span>Next.js</span><span>TypeScript</span><span>Claude API</span><span>Prisma</span></div>
+            </template>
+          </button>
+          <button class="spine" style="--c1:#a855f7;--c2:#ec4899;--h:226px" aria-label="Open: This Site">
+            <span class="spine-title">This Site</span>
+            <span class="spine-band"></span>
+            <template class="spine-detail">
+              <span class="book-tag">Creative · WebGL</span>
+              <h4>This Site</h4>
+              <p class="book-sub">You're standing in it.</p>
+              <p class="book-desc">A three.js particle galaxy in my brand colors, hand-built shaders and all, because a portfolio should feel like the person. Yes — I built the thing you're scrolling through.</p>
+              <div class="book-tech"><span>three.js</span><span>GLSL shaders</span><span>Vanilla JS</span></div>
+            </template>
+          </button>
+        </div>
+        <div class="ledge"></div>
       </div>
     </div>
   </section>
+
+  <!-- book detail modal (an opened book) -->
+  <div class="book-modal" id="bookModal" hidden>
+    <div class="book-modal-backdrop" data-close></div>
+    <div class="book-modal-card" role="dialog" aria-modal="true" aria-label="Project details">
+      <button class="book-modal-close" data-close aria-label="Close">×</button>
+      <div class="book-modal-body"><!-- injected --></div>
+    </div>
+  </div>
 
   <!-- ============ EXPERIENCE & CERTS ============ -->
   <section id="experience" class="panel reveal">
@@ -224,24 +232,43 @@
       </div>
       <p>The trusted advisor public-sector and mission-driven teams call when AI has to actually work — from the first whiteboard sketch to a production rollout they can stand behind.</p>
     </div>
-    <p class="cert-lead">Nine Salesforce certifications, verified on <a href="https://www.salesforce.com/trailblazer/mdevulapalli2020" target="_blank" rel="noopener">my Trailblazer profile</a> — depth I can prove, not just claim.</p>
-    <div class="cert-grid">
-      <a class="cert" href="https://www.salesforce.com/trailblazer/mdevulapalli2020" target="_blank" rel="noopener">🤖 Agentforce Specialist</a>
-      <a class="cert" href="https://www.salesforce.com/trailblazer/mdevulapalli2020" target="_blank" rel="noopener">🏅 Agentblazer Legend</a>
-      <a class="cert" href="https://www.salesforce.com/trailblazer/mdevulapalli2020" target="_blank" rel="noopener">🧠 AI Associate &amp; AI Specialist</a>
-      <a class="cert" href="https://www.salesforce.com/trailblazer/mdevulapalli2020" target="_blank" rel="noopener">⚙️ Platform Administrator</a>
-      <a class="cert" href="https://www.salesforce.com/trailblazer/mdevulapalli2020" target="_blank" rel="noopener">🛠️ Salesforce Admin</a>
-      <a class="cert" href="https://www.salesforce.com/trailblazer/mdevulapalli2020" target="_blank" rel="noopener">📱 App Builder</a>
-      <a class="cert" href="https://www.salesforce.com/trailblazer/mdevulapalli2020" target="_blank" rel="noopener">🌐 Experience Cloud</a>
+    <p class="cert-lead">Nine Salesforce certifications, verified on <a href="https://www.salesforce.com/trailblazer/mdevulapalli2020" target="_blank" rel="noopener">my Trailblazer profile</a> — depth I can prove, not just claim. Each charm is a badge; tap one to open it. ✨</p>
+    <div class="bracelet" aria-label="Certification charm bracelet">
+      <button class="charm" data-title="Agentforce Specialist" data-blurb="Certified to design, build and ship production Agentforce agents.">🤖</button>
+      <button class="charm" data-title="Agentblazer Legend" data-blurb="Top-tier standing in Salesforce's AI enablement community.">🏅</button>
+      <button class="charm" data-title="AI Associate &amp; AI Specialist" data-blurb="Foundational and advanced Salesforce AI credentials.">🧠</button>
+      <button class="charm" data-title="Platform Administrator" data-blurb="Core certification for configuring and governing the platform.">⚙️</button>
+      <button class="charm" data-title="Salesforce Admin" data-blurb="Certified administrator — the backbone of any org.">🛠️</button>
+      <button class="charm" data-title="App Builder" data-blurb="Certified to build custom, declarative apps on the platform.">📱</button>
+      <button class="charm" data-title="Experience Cloud" data-blurb="Certified in building portals and communities on Experience Cloud.">🌐</button>
     </div>
-    <div class="honors">
-      <div class="honor">
-        <span class="honor-mark">🏆</span>
-        <div><b>40 Under 40 — Northern Virginia</b><small>Recognized among the region's emerging leaders</small></div>
+
+    <div class="honor-groups">
+      <div class="honor-col">
+        <h3 class="honor-title">🔧 Technical &amp; recognition</h3>
+        <div class="honor">
+          <span class="honor-mark">🏆</span>
+          <div><b>40 Under 40 — Northern Virginia</b><small>Recognized among the region's emerging leaders</small></div>
+        </div>
+        <div class="honor">
+          <span class="honor-mark">🏅</span>
+          <div><b>Agentblazer Legend</b><small>Top-tier standing in Salesforce's AI enablement community</small></div>
+        </div>
       </div>
-      <div class="honor">
-        <span class="honor-mark">🤝</span>
-        <div><b>Presales Collective</b><small>Active member of the global SE community</small></div>
+      <div class="honor-col">
+        <h3 class="honor-title">🤝 Community &amp; leadership</h3>
+        <div class="honor">
+          <span class="honor-mark">💫</span>
+          <div><b>Co-Founder — WISE GPS</b><small>Co-founded a community lifting people across Salesforce's Global Public Sector org</small></div>
+        </div>
+        <div class="honor">
+          <span class="honor-mark">🌏</span>
+          <div><b>Southasiaforce DMV — Lead</b><small>Leading the DC · MD · VA chapter of Salesforce's South Asian community</small></div>
+        </div>
+        <div class="honor">
+          <span class="honor-mark">🎯</span>
+          <div><b>Presales Collective</b><small>Active member of the global SE community</small></div>
+        </div>
       </div>
     </div>
   </section>
@@ -298,16 +325,16 @@
     <h2>The work that isn't on a slide.</h2>
     <div class="card-grid">
       <div class="qcard">
+        <h3>💫 WISE GPS — Co-Founder</h3>
+        <p>I co-founded WISE GPS to build community and open doors across Salesforce's Global Public Sector org — because talent rises faster when someone holds the door.</p>
+      </div>
+      <div class="qcard">
+        <h3>🌏 Southasiaforce DMV — Lead</h3>
+        <p>I lead the DC·MD·VA chapter of Southasiaforce, Salesforce's South Asian community — creating space for people to belong, connect, and rise.</p>
+      </div>
+      <div class="qcard">
         <h3>🧑‍🏫 Mentorship &amp; Presales Collective</h3>
         <p>An active member of the Presales Collective — I coach engineers and aspiring SEs to find their voice in the room and their footing in the platform.</p>
-      </div>
-      <div class="qcard">
-        <h3>💜 Nonprofit champion</h3>
-        <p>Helping mission-driven orgs punch above their weight with the right technology and a little strategic scrappiness.</p>
-      </div>
-      <div class="qcard">
-        <h3>🌏 Community &amp; culture</h3>
-        <p>Proud of my South Asian roots — I stay close to my community and love creating space for others to belong and rise.</p>
       </div>
       <div class="qcard">
         <h3>📚 Reader &amp; storyteller</h3>
@@ -351,6 +378,6 @@
     { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
   </script>
   <script type="module" src="./main.js?v=6"></script>
-  <script src="./ui.js?v=7"></script>
+  <script src="./ui.js?v=8"></script>
 </body>
 </html>

@@ -136,24 +136,57 @@ section { position: relative; z-index: 2; }
 .role-card p { color: var(--muted); line-height: 1.6; }
 .cert-lead { color: var(--muted); line-height: 1.6; margin-bottom: 18px; font-size: 0.98rem; }
 .cert-lead a { color: #fff; text-decoration: underline; text-decoration-color: var(--purple); text-underline-offset: 3px; }
-.cert-grid { display: flex; flex-wrap: wrap; gap: 12px; }
-.cert {
-  display: inline-block; text-decoration: none; color: #fff;
-  background: var(--card); border: 1px solid var(--border); border-radius: 999px;
-  padding: 10px 18px; font-weight: 600; font-size: 0.92rem; backdrop-filter: blur(8px);
-  transition: transform 0.2s, border-color 0.2s, background 0.2s;
+/* charm bracelet — certs hang as charms from a chain */
+.bracelet {
+  position: relative; display: flex; flex-wrap: wrap; align-items: flex-start;
+  gap: 8px 4px; padding: 20px 6px 10px; margin-bottom: 8px;
+  background:
+    radial-gradient(circle at 10px 10px, rgba(255,255,255,0.5) 0 2px, transparent 2px) 0 0/16px 16px repeat-x;
+  background-position: 0 6px;
 }
-.cert:hover { transform: translateY(-2px); border-color: var(--purple); background: rgba(168,85,247,0.14); }
+.charm {
+  position: relative; cursor: pointer; margin-top: 14px;
+  width: 58px; height: 58px; border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.5);
+  background: radial-gradient(circle at 35% 30%, #fff6, transparent 55%), linear-gradient(135deg, var(--purple), var(--pink));
+  font-size: 1.5rem; line-height: 1; display: grid; place-items: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(255,255,255,0.25);
+  transition: transform 0.25s cubic-bezier(0.2,0.7,0.2,1), box-shadow 0.25s;
+}
+/* the little jump-ring that hangs the charm on the chain */
+.charm::before {
+  content: ""; position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  width: 10px; height: 12px; border: 2px solid rgba(255,255,255,0.6); border-bottom: none;
+  border-radius: 6px 6px 0 0;
+}
+.charm:nth-child(even) { background: radial-gradient(circle at 35% 30%, #fff6, transparent 55%), linear-gradient(135deg, var(--indigo), var(--purple)); }
+.charm:hover, .charm:focus-visible {
+  transform: translateY(4px) rotate(6deg); outline: none;
+  box-shadow: 0 10px 24px rgba(236,72,153,0.55), inset 0 0 0 1px rgba(255,255,255,0.35);
+}
+.charm.open { transform: translateY(6px) scale(1.12); }
 
-.honors { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 26px; }
-.honor {
-  display: flex; gap: 16px; align-items: center;
-  background: linear-gradient(120deg, rgba(168,85,247,0.14), rgba(236,72,153,0.10));
-  border: 1px solid var(--border); border-radius: 16px; padding: 20px 22px; backdrop-filter: blur(8px);
+/* the popover that opens from a charm */
+.charm-pop {
+  position: fixed; z-index: 40; width: 250px; padding: 16px 18px;
+  border-radius: 14px; background: rgba(20,12,34,0.96); border: 1px solid var(--border);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6); backdrop-filter: blur(10px);
+  animation: rise 0.25s ease both;
 }
-.honor-mark { font-size: 2rem; }
-.honor b { display: block; font-size: 1.02rem; }
-.honor small { color: var(--muted); font-size: 0.86rem; }
+.charm-pop b { display: block; font-size: 1rem; margin-bottom: 6px; }
+.charm-pop p { color: var(--muted); font-size: 0.85rem; line-height: 1.5; margin-bottom: 12px; }
+.charm-pop a { color: #fff; font-size: 0.82rem; font-weight: 600; text-decoration: underline; text-decoration-color: var(--purple); text-underline-offset: 3px; }
+
+.honor-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 32px; }
+.honor-title { font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pink); margin-bottom: 14px; }
+.honor {
+  display: flex; gap: 16px; align-items: center; margin-bottom: 14px;
+  background: linear-gradient(120deg, rgba(168,85,247,0.14), rgba(236,72,153,0.10));
+  border: 1px solid var(--border); border-radius: 16px; padding: 18px 20px; backdrop-filter: blur(8px);
+}
+.honor-mark { font-size: 1.8rem; }
+.honor b { display: block; font-size: 1rem; }
+.honor small { color: var(--muted); font-size: 0.84rem; display: block; margin-top: 2px; }
 
 /* ---------- Skills ---------- */
 .tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; }
@@ -189,68 +222,114 @@ section { position: relative; z-index: 2; }
 .qcard h3 { font-size: 1.12rem; margin-bottom: 10px; }
 .qcard p { color: var(--muted); line-height: 1.65; font-size: 0.98rem; }
 
-/* ---------- Work / Bookshelf ---------- */
+/* ---------- Work / Bookcase ---------- */
 .shelf-lead { color: var(--muted); line-height: 1.7; max-width: 680px; margin-bottom: 40px; font-size: 1.02rem; }
 .shelf-lead em { color: #fff; font-style: normal; font-weight: 600; }
 
-.shelf-block { margin-bottom: 46px; }
-.shelf-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; gap: 16px; }
-.shelf-head h3 { font-size: 1.15rem; font-weight: 700; display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
-.shelf-head h3 small { color: var(--muted); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.02em; text-transform: none; }
-.shelf-nav { display: flex; gap: 8px; flex-shrink: 0; }
-.shelf-arrow {
-  width: 38px; height: 38px; border-radius: 50%; cursor: pointer;
-  border: 1px solid var(--border); background: var(--card); color: #fff;
-  font-size: 1.3rem; line-height: 1; display: grid; place-items: center;
-  backdrop-filter: blur(8px); transition: transform 0.2s, border-color 0.2s, background 0.2s;
+.bookcase { display: flex; flex-direction: column; gap: 30px; }
+.shelf-row { position: relative; }
+.shelf-label {
+  font-size: 1.05rem; font-weight: 700; margin-bottom: 8px;
+  display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
 }
-.shelf-arrow:hover { transform: translateY(-2px); border-color: var(--purple); background: rgba(168,85,247,0.18); }
+.shelf-label small { color: var(--muted); font-size: 0.76rem; font-weight: 500; text-transform: none; }
 
-/* the sliding rail — a row of "books" that scroll-snap horizontally */
-.shelf {
-  display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory;
-  padding: 8px 4px 22px; scroll-padding-left: 4px;
-  scrollbar-width: thin; scrollbar-color: var(--purple) transparent;
+/* the row of upright spines standing on a ledge */
+.spines {
+  display: flex; align-items: flex-end; gap: 10px; flex-wrap: wrap;
+  min-height: 260px; padding: 0 6px;
 }
-.shelf::-webkit-scrollbar { height: 8px; }
-.shelf::-webkit-scrollbar-thumb { background: linear-gradient(90deg, var(--purple), var(--pink)); border-radius: 999px; }
-.shelf::-webkit-scrollbar-track { background: rgba(255,255,255,0.06); border-radius: 999px; }
 
-/* a book cover */
-.book {
-  position: relative; flex: 0 0 300px; width: 300px; min-height: 340px;
-  scroll-snap-align: start;
-  border-radius: 6px 14px 14px 6px;
-  background: linear-gradient(150deg, var(--c1), var(--c2));
-  padding: 26px 26px 26px 40px;
-  box-shadow: 0 18px 45px rgba(0,0,0,0.45), inset 0 0 0 1px rgba(255,255,255,0.12);
-  transition: transform 0.28s cubic-bezier(0.2,0.7,0.2,1), box-shadow 0.28s;
+/* a single book spine, standing vertically like on a real shelf */
+.spine {
+  position: relative; cursor: pointer;
+  width: 56px; height: var(--h, 240px);
+  flex: 0 0 auto;
+  border: none; padding: 0;
+  border-radius: 3px 5px 5px 3px;
+  background: linear-gradient(90deg,
+    rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.05) 8%,
+    var(--c1) 9%, var(--c2) 100%);
+  box-shadow: 2px 6px 16px rgba(0,0,0,0.5), inset -2px 0 5px rgba(0,0,0,0.25), inset 2px 0 3px rgba(255,255,255,0.15);
+  transform-origin: bottom center;
+  transition: transform 0.3s cubic-bezier(0.2,0.7,0.2,1), box-shadow 0.3s, width 0.3s;
   overflow: hidden;
 }
-.book:hover { transform: translateY(-8px) rotate(-0.6deg); box-shadow: 0 28px 60px rgba(168,85,247,0.4), inset 0 0 0 1px rgba(255,255,255,0.2); }
-/* the spine — a darker strip down the bound edge */
-.book-spine {
-  position: absolute; top: 0; left: 0; bottom: 0; width: 18px;
-  background: linear-gradient(90deg, rgba(0,0,0,0.35), rgba(0,0,0,0.05));
-  box-shadow: inset -3px 0 6px rgba(0,0,0,0.25);
+/* faint horizontal "pages" texture on the top edge */
+.spine::after {
+  content: ""; position: absolute; top: 0; left: 9%; right: 0; height: 4px;
+  background: repeating-linear-gradient(90deg, rgba(255,255,255,0.3) 0 1px, transparent 1px 3px);
+  opacity: 0.4;
 }
-.book-face { position: relative; z-index: 1; color: #fff; }
+.spine:hover, .spine:focus-visible {
+  transform: translateY(-14px) rotate(-2deg);
+  box-shadow: 6px 16px 34px rgba(168,85,247,0.5), inset -2px 0 5px rgba(0,0,0,0.25), inset 2px 0 3px rgba(255,255,255,0.2);
+  outline: none;
+}
+/* vertical title printed down the spine */
+.spine-title {
+  position: absolute; inset: 0;
+  writing-mode: vertical-rl; text-orientation: mixed;
+  display: flex; align-items: center; justify-content: center;
+  padding: 16px 0 22px 9%;
+  font-size: 0.82rem; font-weight: 700; letter-spacing: 0.02em;
+  color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,0.45);
+  white-space: nowrap;
+}
+/* decorative color band near the foot of the spine */
+.spine-band {
+  position: absolute; bottom: 12px; left: 9%; right: 0; height: 14px;
+  background: rgba(255,255,255,0.22);
+  box-shadow: 0 6px 0 rgba(255,255,255,0.12);
+}
+.spine-detail { display: none; }
+
+/* the wooden ledge each row sits on */
+.ledge {
+  height: 14px; border-radius: 3px;
+  background: linear-gradient(180deg, #6b4a2f, #4a3220);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.5), inset 0 2px 0 rgba(255,255,255,0.12);
+  margin-top: -2px;
+}
+
+/* opened-book modal */
+.book-modal { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; padding: 24px; }
+.book-modal[hidden] { display: none; }
+.book-modal-backdrop { position: absolute; inset: 0; background: rgba(6,4,12,0.72); backdrop-filter: blur(6px); }
+.book-modal-card {
+  position: relative; z-index: 1; width: min(560px, 100%);
+  border-radius: 8px 16px 16px 8px;
+  background: linear-gradient(150deg, var(--c1, #a855f7), var(--c2, #ec4899));
+  padding: 40px 40px 40px 54px;
+  box-shadow: -14px 0 0 rgba(0,0,0,0.18), 0 40px 90px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(255,255,255,0.15);
+  animation: bookOpen 0.4s cubic-bezier(0.2,0.7,0.2,1) both;
+  color: #fff;
+}
+@keyframes bookOpen { from { opacity: 0; transform: perspective(1400px) rotateY(-32deg); } to { opacity: 1; transform: none; } }
+.book-modal-close {
+  position: absolute; top: 14px; right: 16px; z-index: 2;
+  width: 34px; height: 34px; border-radius: 50%; cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.35); background: rgba(0,0,0,0.2); color: #fff;
+  font-size: 1.4rem; line-height: 1; display: grid; place-items: center; transition: background 0.2s;
+}
+.book-modal-close:hover { background: rgba(0,0,0,0.4); }
 .book-tag {
   display: inline-block; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.1em;
-  text-transform: uppercase; color: rgba(255,255,255,0.85);
-  background: rgba(0,0,0,0.22); border-radius: 999px; padding: 5px 11px; margin-bottom: 14px;
+  text-transform: uppercase; color: rgba(255,255,255,0.9);
+  background: rgba(0,0,0,0.24); border-radius: 999px; padding: 5px 12px; margin-bottom: 16px;
 }
-.book h4 { font-size: 1.35rem; font-weight: 800; line-height: 1.12; letter-spacing: -0.01em; margin-bottom: 6px; }
-.book-sub { font-size: 0.9rem; font-weight: 600; color: rgba(255,255,255,0.92); margin-bottom: 14px; font-style: italic; }
-.book-desc { font-size: 0.86rem; line-height: 1.55; color: rgba(255,255,255,0.9); margin-bottom: 16px; }
-.book-tech { display: flex; flex-wrap: wrap; gap: 6px; }
+.book-modal-body h4 { font-size: 1.7rem; font-weight: 800; line-height: 1.1; letter-spacing: -0.01em; margin-bottom: 8px; }
+.book-sub { font-size: 1rem; font-weight: 600; color: rgba(255,255,255,0.95); margin-bottom: 18px; font-style: italic; }
+.book-desc { font-size: 0.96rem; line-height: 1.65; color: rgba(255,255,255,0.94); margin-bottom: 20px; }
+.book-tech { display: flex; flex-wrap: wrap; gap: 7px; }
 .book-tech span {
-  font-size: 0.7rem; font-weight: 600; padding: 4px 9px; border-radius: 6px;
-  background: rgba(255,255,255,0.16); color: #fff; backdrop-filter: blur(4px);
+  font-size: 0.74rem; font-weight: 600; padding: 5px 11px; border-radius: 7px;
+  background: rgba(255,255,255,0.18); color: #fff;
 }
 
 @media (max-width: 560px) {
-  .book { flex-basis: 82vw; width: 82vw; }
+  .spines { gap: 8px; }
+  .spine { width: 48px; }
 }
 
 /* ---------- Moments gallery ---------- */
@@ -300,7 +379,7 @@ section { position: relative; z-index: 2; }
   .nav nav a { font-size: 0.82rem; }
   .about-grid { grid-template-columns: 1fr; justify-items: center; text-align: center; }
   .avatar { width: 150px; height: 150px; font-size: 3.6rem; }
-  .honors, .card-grid { grid-template-columns: 1fr; }
+  .honor-groups, .card-grid { grid-template-columns: 1fr; }
   .fp-row { grid-template-columns: 1fr; gap: 8px; }
 }
 
