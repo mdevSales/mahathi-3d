@@ -156,11 +156,19 @@ function tick() {
     stars.rotation.y = -elapsed * 0.01;
   }
 
-  // ease camera toward the cursor for parallax
+  // ease cursor influence
   mouse.x += (target.x - mouse.x) * 0.04;
   mouse.y += (target.y - mouse.y) * 0.04;
-  camera.position.x = mouse.x * 2.2;
-  camera.position.y = 1.6 + -mouse.y * 1.4;
+
+  // Cinematic auto-orbit: the camera flies around the galaxy on its own,
+  // viewing the disc at a tilt so depth (near edge large, far edge small) is obvious.
+  const orbitSpeed = reduceMotion ? 0 : 0.12;
+  const angle = elapsed * orbitSpeed + mouse.x * 0.8;      // cursor nudges the orbit
+  const distance = 9;
+  const height = 3.2 + Math.sin(elapsed * 0.15) * 1.6 - mouse.y * 1.5; // gentle rise/dip
+  camera.position.x = Math.sin(angle) * distance;
+  camera.position.z = Math.cos(angle) * distance;
+  camera.position.y = height;
   camera.lookAt(0, 0, 0);
 
   renderer.render(scene, camera);
